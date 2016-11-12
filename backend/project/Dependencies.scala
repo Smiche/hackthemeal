@@ -11,6 +11,7 @@ object Version {
 
   lazy val akka                 = "2.4.9"
   lazy val time                 = "2.12.0"
+  lazy val json4s               = "0.5.0"
 }
 
 object Libraries {
@@ -19,7 +20,8 @@ object Libraries {
   lazy val playSlick            = "com.typesafe.play"              %% "play-slick"             % Version.playSlick
   lazy val jodaMapper           = "com.github.tototoshi"           %% "slick-joda-mapper"      % Version.jodaMapper
   lazy val postgresDriver       = "org.postgresql"                 %  "postgresql"             % Version.postgresDriver
-
+  lazy val json4s               = "com.github.tototoshi"           %% "play-json4s-native"     % Version.json4s
+  lazy val json4sExt            = "org.json4s"                     %% "json4s-ext"             % "3.3.0"
 }
 
 object Dependencies {
@@ -27,5 +29,5 @@ object Dependencies {
 
   val slick = Seq(playSlick, postgresDriver, jodaMapper)
 
-  val common = (Seq(time, jdbc) ++ slick).map( _.exclude("com.zaxxer", "HikariCP-java6"))
+  val common = (Seq(time, jdbc, json4s, json4sExt) ++ slick).map( _.exclude("com.zaxxer", "HikariCP-java6"))
 }

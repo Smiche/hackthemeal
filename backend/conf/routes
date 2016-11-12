@@ -2,4 +2,6 @@
 # This file defines all application routes (Higher priority routes first)
 # ~~~~
 
-GET     /users/                     @fi.shika.schedule.controller.UserController.getAll
+POST     /dishes/                     @fi.shika.hackthemeal.controller.MainController.createDishes
+POST     /diners/                     @fi.shika.hackthemeal.controller.MainController.createDiners
+POST     /portions/                   @fi.shika.hackthemeal.controller.MainController.createPortions

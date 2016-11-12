@@ -1,71 +1,140 @@
-2016-11-12 17:12:06,097 [INFO] from play.core.server.NettyServer in pool-5-thread-3 - Listening for HTTP on /0:0:0:0:0:0:0:0:9000
->2016-11-12 17:12:21,845 - from application in netty-event-loop-3 
+2016-11-12 21:36:01,360 [INFO] from play.core.server.NettyServer in pool-4-thread-1 - Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+>2016-11-12 21:36:20,875 - from play.api.db.slick.DefaultSlickApi in ForkJoinPool-1-worker-1 
+Created Slick database config for key default.
 
+>2016-11-12 21:36:20,910 - from com.zaxxer.hikari.HikariDataSource in ForkJoinPool-1-worker-1 
+db - is starting.
 
-! @723fc1050 - Internal server error, for (GET) [/] ->
- 
-play.api.PlayException: Cannot load module[Module [fi.shika.schedule.di.Module] cannot be instantiated.]
-	at play.api.inject.Modules$.play$api$inject$Modules$$constructModule(Module.scala:147)
-	at play.api.inject.Modules$$anonfun$locate$1.apply(Module.scala:114)
-	at play.api.inject.Modules$$anonfun$locate$1.apply(Module.scala:113)
-	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
-	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
-	at scala.collection.immutable.HashSet$HashSet1.foreach(HashSet.scala:316)
-	at scala.collection.immutable.HashSet$HashTrieSet.foreach(HashSet.scala:972)
-	at scala.collection.TraversableLike$class.map(TraversableLike.scala:234)
-	at scala.collection.AbstractSet.scala$collection$SetLike$$super$map(Set.scala:47)
-	at scala.collection.SetLike$class.map(SetLike.scala:92)
-	at scala.collection.AbstractSet.map(Set.scala:47)
-	at play.api.inject.Modules$.locate(Module.scala:113)
-	at play.api.inject.guice.GuiceableModule$.loadModules(GuiceInjectorBuilder.scala:272)
-	at play.api.inject.guice.GuiceApplicationBuilder$$anonfun$$lessinit$greater$default$10$1.apply(GuiceApplicationBuilder.scala:30)
-	at play.api.inject.guice.GuiceApplicationBuilder$$anonfun$$lessinit$greater$default$10$1.apply(GuiceApplicationBuilder.scala:30)
-	at play.api.inject.guice.GuiceApplicationBuilder.applicationModule(GuiceApplicationBuilder.scala:109)
-	at play.api.inject.guice.GuiceBuilder.injector(GuiceInjectorBuilder.scala:181)
-	at play.api.inject.guice.GuiceApplicationBuilder.build(GuiceApplicationBuilder.scala:123)
-	at play.api.inject.guice.GuiceApplicationLoader.load(GuiceApplicationLoader.scala:21)
-	at play.core.server.DevServerStart$$anonfun$mainDev$1$$anon$1$$anonfun$get$1$$anonfun$apply$1$$anonfun$1$$anonfun$2.apply(DevServerStart.scala:158)
-	at play.core.server.DevServerStart$$anonfun$mainDev$1$$anon$1$$anonfun$get$1$$anonfun$apply$1$$anonfun$1$$anonfun$2.apply(DevServerStart.scala:155)
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:21)
-	at play.core.server.DevServerStart$$anonfun$mainDev$1$$anon$1$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(DevServerStart.scala:155)
-	at play.core.server.DevServerStart$$anonfun$mainDev$1$$anon$1$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(DevServerStart.scala:126)
-	at scala.Option.map(Option.scala:146)
-	at play.core.server.DevServerStart$$anonfun$mainDev$1$$anon$1$$anonfun$get$1$$anonfun$apply$1.apply(DevServerStart.scala:126)
-	at play.core.server.DevServerStart$$anonfun$mainDev$1$$anon$1$$anonfun$get$1$$anonfun$apply$1.apply(DevServerStart.scala:124)
-	at scala.util.Success.flatMap(Try.scala:231)
-	at play.core.server.DevServerStart$$anonfun$mainDev$1$$anon$1$$anonfun$get$1.apply(DevServerStart.scala:124)
-	at play.core.server.DevServerStart$$anonfun$mainDev$1$$anon$1$$anonfun$get$1.apply(DevServerStart.scala:116)
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24)
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24)
-	at java.util.concurrent.ForkJoinTask$RunnableExecuteAction.exec(ForkJoinTask.java:1402)
-	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
-	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
-	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
-	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
-Caused by: java.lang.ClassNotFoundException: fi.shika.schedule.di.Module
-	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
-	at play.api.inject.Modules$$anonfun$locate$1$$anonfun$apply$1.apply(Module.scala:115)
-	at play.api.inject.Modules$$anonfun$locate$1$$anonfun$apply$1.apply(Module.scala:115)
-	at play.api.inject.Modules$.play$api$inject$Modules$$constructModule(Module.scala:121)
-	... 36 common frames omitted
+>2016-11-12 21:36:20,993 - from application in ForkJoinPool-1-worker-1 
+application.conf @ file:/Users/ashikov/Documents/test/hackthemeal/backend/target/scala-2.11/classes/application.conf: 29: parsers.text.maxLength is deprecated, use play.http.parser.maxMemoryBuffer instead
 
->2016-11-12 17:13:11,279 - from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-2 
+>2016-11-12 21:36:21,275 - from fi.shika.schedule.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-2 
+Checking table named hackthemeal_dish
+
+>2016-11-12 21:36:21,285 - from fi.shika.schedule.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-2 
+Checking table named hackthemeal_diner
+
+>2016-11-12 21:36:21,340 - from fi.shika.schedule.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-2 
+Checking table named hackthemeal_portion
+
+>2016-11-12 21:36:21,371 - from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-3 
 Slf4jLogger started
 
->2016-11-12 17:13:11,290 - from play.api.libs.concurrent.ActorSystemProvider in ForkJoinPool-1-worker-2 
+>2016-11-12 21:36:21,379 - from play.api.libs.concurrent.ActorSystemProvider in ForkJoinPool-1-worker-1 
 Starting application default Akka system: application
 
->2016-11-12 17:13:11,309 - from play.api.Play in ForkJoinPool-1-worker-2 
+>2016-11-12 21:36:21,393 - from play.api.Play in ForkJoinPool-1-worker-1 
 Application started (Dev)
 
->2016-11-12 17:20:57,648 - from application in netty-event-loop-6 
+>2016-11-12 21:36:22,590 - from application in application-akka.actor.default-dispatcher-3 
 
 
-! @723fd498b - Internal server error, for (GET) [/] ->
+! @723gki792 - Internal server error, for (POST) [/portions/] ->
  
-play.sbt.PlayExceptions$CompilationException: Compilation error[type shika is not a member of package fi]
+play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[MappingException: No usable value for moment
+Invalid date format 2016-11-14T11:42:07.576Z]]
+	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:280)
+	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:206)
+	at play.api.GlobalSettings$class.onError(GlobalSettings.scala:160)
+	at play.api.DefaultGlobal$.onError(GlobalSettings.scala:188)
+	at play.api.http.GlobalSettingsHttpErrorHandler.onServerError(HttpErrorHandler.scala:98)
+	at play.core.server.netty.PlayRequestHandler$$anonfun$2$$anonfun$apply$1.applyOrElse(PlayRequestHandler.scala:100)
+	at play.core.server.netty.PlayRequestHandler$$anonfun$2$$anonfun$apply$1.applyOrElse(PlayRequestHandler.scala:99)
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:346)
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:345)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:70)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248)
+	at scala.concurrent.Promise$class.complete(Promise.scala:55)
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153)
+	at scala.concurrent.Promise$class.failure(Promise.scala:104)
+	at scala.concurrent.impl.Promise$DefaultPromise.failure(Promise.scala:153)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:257)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:91)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:90)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:39)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:405)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+Caused by: org.json4s.package$MappingException: No usable value for moment
+Invalid date format 2016-11-14T11:42:07.576Z
+	at org.json4s.reflect.package$.fail(package.scala:93)
+	at org.json4s.Extraction$ClassInstanceBuilder.org$json4s$Extraction$ClassInstanceBuilder$$buildCtorArg(Extraction.scala:509)
+	at org.json4s.Extraction$ClassInstanceBuilder$$anonfun$14.apply(Extraction.scala:529)
+	at org.json4s.Extraction$ClassInstanceBuilder$$anonfun$14.apply(Extraction.scala:529)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.mutable.ResizableArray$class.foreach(ResizableArray.scala:59)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:48)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:234)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:104)
+	at org.json4s.Extraction$ClassInstanceBuilder.org$json4s$Extraction$ClassInstanceBuilder$$instantiate(Extraction.scala:517)
+	at org.json4s.Extraction$ClassInstanceBuilder$$anonfun$result$6.apply(Extraction.scala:564)
+	at org.json4s.Extraction$ClassInstanceBuilder$$anonfun$result$6.apply(Extraction.scala:559)
+	at org.json4s.Extraction$.org$json4s$Extraction$$customOrElse(Extraction.scala:573)
+	at org.json4s.Extraction$ClassInstanceBuilder.result(Extraction.scala:559)
+	at org.json4s.Extraction$.extract(Extraction.scala:394)
+	at org.json4s.Extraction$CollectionBuilder$$anonfun$6.apply(Extraction.scala:403)
+	at org.json4s.Extraction$CollectionBuilder$$anonfun$6.apply(Extraction.scala:403)
+	at scala.collection.immutable.List.map(List.scala:273)
+	at org.json4s.Extraction$CollectionBuilder.mkCollection(Extraction.scala:403)
+	at org.json4s.Extraction$CollectionBuilder.result(Extraction.scala:427)
+	at org.json4s.Extraction$.extract(Extraction.scala:377)
+	at org.json4s.Extraction$.extract(Extraction.scala:43)
+	at org.json4s.ExtractableJsonAstNode.extract(ExtractableJsonAstNode.scala:21)
+	at fi.shika.schedule.controller.MainController$$anonfun$createPortions$1.apply(MainController.scala:34)
+	at fi.shika.schedule.controller.MainController$$anonfun$createPortions$1.apply(MainController.scala:33)
+	at play.api.mvc.Action$.invokeBlock(Action.scala:498)
+	at play.api.mvc.Action$.invokeBlock(Action.scala:495)
+	at play.api.mvc.ActionBuilder$$anon$2.apply(Action.scala:458)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:112)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:112)
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:111)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:110)
+	at scala.Option.map(Option.scala:146)
+	at play.api.mvc.Action$$anonfun$apply$2.apply(Action.scala:110)
+	at play.api.mvc.Action$$anonfun$apply$2.apply(Action.scala:103)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:253)
+	... 14 common frames omitted
+Caused by: org.json4s.package$MappingException: Invalid date format 2016-11-14T11:42:07.576Z
+	at org.json4s.ext.DateParser$.parse(JodaTimeSerializers.scala:62)
+	at org.json4s.ext.DateTimeSerializer$$anonfun$$lessinit$greater$4$$anonfun$apply$7.applyOrElse(JodaTimeSerializers.scala:67)
+	at org.json4s.ext.DateTimeSerializer$$anonfun$$lessinit$greater$4$$anonfun$apply$7.applyOrElse(JodaTimeSerializers.scala:66)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36)
+	at org.json4s.CustomSerializer$$anonfun$deserialize$1.applyOrElse(Formats.scala:384)
+	at org.json4s.CustomSerializer$$anonfun$deserialize$1.applyOrElse(Formats.scala:382)
+	at scala.PartialFunction$OrElse.apply(PartialFunction.scala:167)
+	at org.json4s.CustomSerializer$$anonfun$deserialize$1.applyOrElse(Formats.scala:382)
+	at org.json4s.CustomSerializer$$anonfun$deserialize$1.applyOrElse(Formats.scala:382)
+	at scala.PartialFunction$OrElse.apply(PartialFunction.scala:167)
+	at org.json4s.CustomSerializer$$anonfun$deserialize$1.applyOrElse(Formats.scala:382)
+	at org.json4s.CustomSerializer$$anonfun$deserialize$1.applyOrElse(Formats.scala:382)
+	at scala.PartialFunction$OrElse.apply(PartialFunction.scala:167)
+	at scala.PartialFunction$class.applyOrElse(PartialFunction.scala:123)
+	at scala.collection.AbstractMap.applyOrElse(Map.scala:59)
+	at scala.PartialFunction$OrElse.apply(PartialFunction.scala:167)
+	at org.json4s.Extraction$.org$json4s$Extraction$$customOrElse(Extraction.scala:572)
+	at org.json4s.Extraction$ClassInstanceBuilder.result(Extraction.scala:559)
+	at org.json4s.Extraction$.extract(Extraction.scala:394)
+	at org.json4s.Extraction$ClassInstanceBuilder.org$json4s$Extraction$ClassInstanceBuilder$$buildCtorArg(Extraction.scala:497)
+	... 50 common frames omitted
+
+>2016-11-12 21:46:59,705 - from application in netty-event-loop-4 
+
+
+! @723gm2dkm - Internal server error, for (POST) [/portions/] ->
+ 
+play.sbt.PlayExceptions$CompilationException: Compilation error[type MainController is not a member of package fi.shika.schedule.controller]
 	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27)
 	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27)
 	at scala.Option.map(Option.scala:145)
@@ -96,126 +165,479 @@ play.sbt.PlayExceptions$CompilationException: Compilation error[type shika is no
 	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
 	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
 
->2016-11-12 17:21:01,417 - from application in netty-event-loop-6 
-
-
-! @723fd4enb - Internal server error, for (GET) [/users/] ->
- 
-play.sbt.PlayExceptions$CompilationException: Compilation error[type shika is not a member of package fi]
-	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27)
-	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27)
-	at scala.Option.map(Option.scala:145)
-	at play.sbt.run.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:49)
-	at play.sbt.run.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:44)
-	at scala.Option.map(Option.scala:145)
-	at play.sbt.run.PlayReload$.taskFailureHandler(PlayReload.scala:44)
-	at play.sbt.run.PlayReload$.compileFailure(PlayReload.scala:40)
-	at play.sbt.run.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17)
-	at play.sbt.run.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17)
-	at scala.util.Either$LeftProjection.map(Either.scala:377)
-	at play.sbt.run.PlayReload$.compile(PlayReload.scala:17)
-	at play.sbt.run.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61)
-	at play.sbt.run.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61)
-	at play.runsupport.Reloader$$anonfun$reload$1.apply(Reloader.scala:338)
-	at play.runsupport.Reloader$$anon$3.run(Reloader.scala:43)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at play.runsupport.Reloader$.play$runsupport$Reloader$$withReloaderContextClassLoader(Reloader.scala:39)
-	at play.runsupport.Reloader.reload(Reloader.scala:336)
-	at play.core.server.DevServerStart$$anonfun$mainDev$1$$anon$1$$anonfun$get$1.apply(DevServerStart.scala:118)
-	at play.core.server.DevServerStart$$anonfun$mainDev$1$$anon$1$$anonfun$get$1.apply(DevServerStart.scala:116)
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24)
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24)
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:39)
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:405)
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
-
->2016-11-12 17:21:30,458 - from play.api.libs.concurrent.ActorSystemProvider in application-akka.actor.default-dispatcher-5 
+>2016-11-12 21:47:39,872 - from play.api.libs.concurrent.ActorSystemProvider in application-akka.actor.default-dispatcher-5 
 Shutdown application default Akka system: application
 
->2016-11-12 17:21:30,752 - from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-2 
+>2016-11-12 21:47:39,920 - from com.zaxxer.hikari.pool.HikariPool in application-akka.actor.default-dispatcher-7 
+db - is closing down.
+
+>2016-11-12 21:47:39,934 - from play.api.db.slick.DefaultSlickApi in application-akka.actor.default-dispatcher-7 
+Database default was successfully closed.
+
+>2016-11-12 21:47:40,146 - from play.api.db.slick.DefaultSlickApi in application-akka.actor.default-dispatcher-5 
+Created Slick database config for key default.
+
+>2016-11-12 21:47:40,147 - from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-5 
+db - is starting.
+
+>2016-11-12 21:47:40,152 - from application in application-akka.actor.default-dispatcher-5 
+application.conf @ file:/Users/ashikov/Documents/test/hackthemeal/backend/target/scala-2.11/classes/application.conf: 29: parsers.text.maxLength is deprecated, use play.http.parser.maxMemoryBuffer instead
+
+>2016-11-12 21:47:40,246 - from fi.shika.hackthemeal.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-3 
+Checking table named hackthemeal_dish
+
+>2016-11-12 21:47:40,255 - from fi.shika.hackthemeal.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-3 
+Checking table named hackthemeal_diner
+
+>2016-11-12 21:47:40,262 - from fi.shika.hackthemeal.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-3 
+Checking table named hackthemeal_portion
+
+>2016-11-12 21:47:40,263 - from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-3 
 Slf4jLogger started
 
->2016-11-12 17:21:30,755 - from play.api.libs.concurrent.ActorSystemProvider in application-akka.actor.default-dispatcher-5 
+>2016-11-12 21:47:40,268 - from play.api.libs.concurrent.ActorSystemProvider in application-akka.actor.default-dispatcher-5 
 Starting application default Akka system: application
 
->2016-11-12 17:21:30,795 - from application in netty-event-loop-6 
+>2016-11-12 21:47:40,269 - from play.api.Play in application-akka.actor.default-dispatcher-5 
+Application started (Dev)
+
+>2016-11-12 21:47:40,465 - from application in application-akka.actor.default-dispatcher-2 
 
 
-! @723fd6698 - Internal server error, for (GET) [/users/] ->
+! @723gm4m3c - Internal server error, for (POST) [/portions/] ->
  
-play.api.UnexpectedException: Unexpected exception[ProvisionException: Unable to provision, see the following errors:
-
-1) Could not find a suitable constructor in fi.shika.schedule.controller.UserController. Classes must have either one (and only one) constructor annotated with @Inject or a zero-argument constructor that is not private.
-  at fi.shika.schedule.controller.UserController.class(UserController.scala:8)
-  while locating com.google.inject.Provider<fi.shika.schedule.controller.UserController>
-    for parameter 1 at router.Routes.<init>(Routes.scala:27)
-  while locating router.Routes
-  while locating play.api.inject.RoutesProvider
-  while locating play.api.routing.Router
-    for parameter 0 at play.api.http.JavaCompatibleHttpRequestHandler.<init>(HttpRequestHandler.scala:200)
-  while locating play.api.http.JavaCompatibleHttpRequestHandler
-  while locating play.api.http.HttpRequestHandler
-    for parameter 4 at play.api.DefaultApplication.<init>(Application.scala:221)
-  at play.api.DefaultApplication.class(Application.scala:221)
-  while locating play.api.DefaultApplication
-  while locating play.api.Application
-
-1 error]
-	at play.core.server.DevServerStart$$anonfun$mainDev$1$$anon$1$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(DevServerStart.scala:170)
-	at play.core.server.DevServerStart$$anonfun$mainDev$1$$anon$1$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(DevServerStart.scala:126)
-	at scala.Option.map(Option.scala:146)
-	at play.core.server.DevServerStart$$anonfun$mainDev$1$$anon$1$$anonfun$get$1$$anonfun$apply$1.apply(DevServerStart.scala:126)
-	at play.core.server.DevServerStart$$anonfun$mainDev$1$$anon$1$$anonfun$get$1$$anonfun$apply$1.apply(DevServerStart.scala:124)
-	at scala.util.Success.flatMap(Try.scala:231)
-	at play.core.server.DevServerStart$$anonfun$mainDev$1$$anon$1$$anonfun$get$1.apply(DevServerStart.scala:124)
-	at play.core.server.DevServerStart$$anonfun$mainDev$1$$anon$1$$anonfun$get$1.apply(DevServerStart.scala:116)
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24)
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24)
+play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[MappingException: No usable value for energy
+Do not know how to convert JString(28.64) into int]]
+	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:280)
+	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:206)
+	at play.api.GlobalSettings$class.onError(GlobalSettings.scala:160)
+	at play.api.DefaultGlobal$.onError(GlobalSettings.scala:188)
+	at play.api.http.GlobalSettingsHttpErrorHandler.onServerError(HttpErrorHandler.scala:98)
+	at play.core.server.netty.PlayRequestHandler$$anonfun$2$$anonfun$apply$1.applyOrElse(PlayRequestHandler.scala:100)
+	at play.core.server.netty.PlayRequestHandler$$anonfun$2$$anonfun$apply$1.applyOrElse(PlayRequestHandler.scala:99)
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:346)
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:345)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:70)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248)
+	at scala.concurrent.Promise$class.complete(Promise.scala:55)
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153)
+	at scala.concurrent.Promise$class.failure(Promise.scala:104)
+	at scala.concurrent.impl.Promise$DefaultPromise.failure(Promise.scala:153)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:257)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:91)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:90)
 	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:39)
 	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:405)
 	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
 	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
 	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
 	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
-Caused by: com.google.inject.ProvisionException: Unable to provision, see the following errors:
-
-1) Could not find a suitable constructor in fi.shika.schedule.controller.UserController. Classes must have either one (and only one) constructor annotated with @Inject or a zero-argument constructor that is not private.
-  at fi.shika.schedule.controller.UserController.class(UserController.scala:8)
-  while locating com.google.inject.Provider<fi.shika.schedule.controller.UserController>
-    for parameter 1 at router.Routes.<init>(Routes.scala:27)
-  while locating router.Routes
-  while locating play.api.inject.RoutesProvider
-  while locating play.api.routing.Router
-    for parameter 0 at play.api.http.JavaCompatibleHttpRequestHandler.<init>(HttpRequestHandler.scala:200)
-  while locating play.api.http.JavaCompatibleHttpRequestHandler
-  while locating play.api.http.HttpRequestHandler
-    for parameter 4 at play.api.DefaultApplication.<init>(Application.scala:221)
-  at play.api.DefaultApplication.class(Application.scala:221)
-  while locating play.api.DefaultApplication
-  while locating play.api.Application
-
-1 error
-	at com.google.inject.internal.InjectorImpl$2.get(InjectorImpl.java:1025)
-	at com.google.inject.internal.InjectorImpl.getInstance(InjectorImpl.java:1051)
-	at play.api.inject.guice.GuiceInjector.instanceOf(GuiceInjectorBuilder.scala:405)
-	at play.api.inject.guice.GuiceInjector.instanceOf(GuiceInjectorBuilder.scala:400)
-	at play.api.inject.guice.GuiceApplicationBuilder.build(GuiceApplicationBuilder.scala:123)
-	at play.api.inject.guice.GuiceApplicationLoader.load(GuiceApplicationLoader.scala:21)
-	at play.core.server.DevServerStart$$anonfun$mainDev$1$$anon$1$$anonfun$get$1$$anonfun$apply$1$$anonfun$1$$anonfun$2.apply(DevServerStart.scala:158)
-	at play.core.server.DevServerStart$$anonfun$mainDev$1$$anon$1$$anonfun$get$1$$anonfun$apply$1$$anonfun$1$$anonfun$2.apply(DevServerStart.scala:155)
+Caused by: org.json4s.package$MappingException: No usable value for energy
+Do not know how to convert JString(28.64) into int
+	at org.json4s.reflect.package$.fail(package.scala:93)
+	at org.json4s.Extraction$ClassInstanceBuilder.org$json4s$Extraction$ClassInstanceBuilder$$buildCtorArg(Extraction.scala:509)
+	at org.json4s.Extraction$ClassInstanceBuilder$$anonfun$14.apply(Extraction.scala:529)
+	at org.json4s.Extraction$ClassInstanceBuilder$$anonfun$14.apply(Extraction.scala:529)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.mutable.ResizableArray$class.foreach(ResizableArray.scala:59)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:48)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:234)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:104)
+	at org.json4s.Extraction$ClassInstanceBuilder.org$json4s$Extraction$ClassInstanceBuilder$$instantiate(Extraction.scala:517)
+	at org.json4s.Extraction$ClassInstanceBuilder$$anonfun$result$6.apply(Extraction.scala:564)
+	at org.json4s.Extraction$ClassInstanceBuilder$$anonfun$result$6.apply(Extraction.scala:559)
+	at org.json4s.Extraction$.org$json4s$Extraction$$customOrElse(Extraction.scala:573)
+	at org.json4s.Extraction$ClassInstanceBuilder.result(Extraction.scala:559)
+	at org.json4s.Extraction$.extract(Extraction.scala:394)
+	at org.json4s.Extraction$CollectionBuilder$$anonfun$6.apply(Extraction.scala:403)
+	at org.json4s.Extraction$CollectionBuilder$$anonfun$6.apply(Extraction.scala:403)
+	at scala.collection.immutable.List.map(List.scala:273)
+	at org.json4s.Extraction$CollectionBuilder.mkCollection(Extraction.scala:403)
+	at org.json4s.Extraction$CollectionBuilder.result(Extraction.scala:427)
+	at org.json4s.Extraction$.extract(Extraction.scala:377)
+	at org.json4s.Extraction$.extract(Extraction.scala:43)
+	at org.json4s.ExtractableJsonAstNode.extract(ExtractableJsonAstNode.scala:21)
+	at fi.shika.hackthemeal.controller.MainController$$anonfun$createPortions$1.apply(MainController.scala:35)
+	at fi.shika.hackthemeal.controller.MainController$$anonfun$createPortions$1.apply(MainController.scala:34)
+	at play.api.mvc.Action$.invokeBlock(Action.scala:498)
+	at play.api.mvc.Action$.invokeBlock(Action.scala:495)
+	at play.api.mvc.ActionBuilder$$anon$2.apply(Action.scala:458)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:112)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:112)
 	at play.utils.Threads$.withContextClassLoader(Threads.scala:21)
-	at play.core.server.DevServerStart$$anonfun$mainDev$1$$anon$1$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(DevServerStart.scala:155)
-	... 15 common frames omitted
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:111)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:110)
+	at scala.Option.map(Option.scala:146)
+	at play.api.mvc.Action$$anonfun$apply$2.apply(Action.scala:110)
+	at play.api.mvc.Action$$anonfun$apply$2.apply(Action.scala:103)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:253)
+	... 14 common frames omitted
+Caused by: org.json4s.package$MappingException: Do not know how to convert JString(28.64) into int
+	at org.json4s.Extraction$.convert(Extraction.scala:676)
+	at org.json4s.Extraction$.extract(Extraction.scala:388)
+	at org.json4s.Extraction$ClassInstanceBuilder.org$json4s$Extraction$ClassInstanceBuilder$$buildCtorArg(Extraction.scala:497)
+	... 50 common frames omitted
 
->2016-11-12 17:22:42,391 - from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-4 
+>2016-11-12 21:50:20,312 - from play.api.libs.concurrent.ActorSystemProvider in application-akka.actor.default-dispatcher-3 
+Shutdown application default Akka system: application
+
+>2016-11-12 21:50:20,323 - from com.zaxxer.hikari.pool.HikariPool in application-akka.actor.default-dispatcher-6 
+db - is closing down.
+
+>2016-11-12 21:50:20,362 - from play.api.db.slick.DefaultSlickApi in application-akka.actor.default-dispatcher-6 
+Database default was successfully closed.
+
+>2016-11-12 21:50:20,608 - from play.api.db.slick.DefaultSlickApi in application-akka.actor.default-dispatcher-3 
+Created Slick database config for key default.
+
+>2016-11-12 21:50:20,609 - from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-3 
+db - is starting.
+
+>2016-11-12 21:50:20,612 - from application in application-akka.actor.default-dispatcher-3 
+application.conf @ file:/Users/ashikov/Documents/test/hackthemeal/backend/target/scala-2.11/classes/application.conf: 29: parsers.text.maxLength is deprecated, use play.http.parser.maxMemoryBuffer instead
+
+>2016-11-12 21:50:20,715 - from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-3 
 Slf4jLogger started
 
->2016-11-12 17:22:42,396 - from play.api.libs.concurrent.ActorSystemProvider in ForkJoinPool-1-worker-3 
+>2016-11-12 21:50:20,718 - from play.api.libs.concurrent.ActorSystemProvider in application-akka.actor.default-dispatcher-3 
 Starting application default Akka system: application
 
->2016-11-12 17:22:42,401 - from play.api.Play in ForkJoinPool-1-worker-3 
+>2016-11-12 21:50:20,720 - from play.api.Play in application-akka.actor.default-dispatcher-3 
+Application started (Dev)
+
+>2016-11-12 21:50:20,904 - from fi.shika.hackthemeal.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-0 
+Checking table named hackthemeal_dish
+
+>2016-11-12 21:50:21,011 - from fi.shika.hackthemeal.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-0 
+Checking table named hackthemeal_diner
+
+>2016-11-12 21:50:21,024 - from fi.shika.hackthemeal.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-0 
+Checking table named hackthemeal_portion
+
+>2016-11-12 21:50:21,034 - from fi.shika.hackthemeal.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-0 
+Creating table named hackthemeal_portion
+
+>2016-11-12 21:50:24,726 - from application in application-akka.actor.default-dispatcher-4 
+
+
+! @723gme533 - Internal server error, for (POST) [/portions/] ->
+ 
+play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[MappingException: No usable value for mealname
+Did not find value which can be converted into java.lang.String]]
+	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:280)
+	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:206)
+	at play.api.GlobalSettings$class.onError(GlobalSettings.scala:160)
+	at play.api.DefaultGlobal$.onError(GlobalSettings.scala:188)
+	at play.api.http.GlobalSettingsHttpErrorHandler.onServerError(HttpErrorHandler.scala:98)
+	at play.core.server.netty.PlayRequestHandler$$anonfun$2$$anonfun$apply$1.applyOrElse(PlayRequestHandler.scala:100)
+	at play.core.server.netty.PlayRequestHandler$$anonfun$2$$anonfun$apply$1.applyOrElse(PlayRequestHandler.scala:99)
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:346)
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:345)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:70)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248)
+	at scala.concurrent.Promise$class.complete(Promise.scala:55)
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153)
+	at scala.concurrent.Promise$class.failure(Promise.scala:104)
+	at scala.concurrent.impl.Promise$DefaultPromise.failure(Promise.scala:153)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:257)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:91)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:90)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:39)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:405)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+Caused by: org.json4s.package$MappingException: No usable value for mealname
+Did not find value which can be converted into java.lang.String
+	at org.json4s.reflect.package$.fail(package.scala:93)
+	at org.json4s.Extraction$ClassInstanceBuilder.org$json4s$Extraction$ClassInstanceBuilder$$buildCtorArg(Extraction.scala:509)
+	at org.json4s.Extraction$ClassInstanceBuilder$$anonfun$14.apply(Extraction.scala:529)
+	at org.json4s.Extraction$ClassInstanceBuilder$$anonfun$14.apply(Extraction.scala:529)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.mutable.ResizableArray$class.foreach(ResizableArray.scala:59)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:48)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:234)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:104)
+	at org.json4s.Extraction$ClassInstanceBuilder.org$json4s$Extraction$ClassInstanceBuilder$$instantiate(Extraction.scala:517)
+	at org.json4s.Extraction$ClassInstanceBuilder$$anonfun$result$6.apply(Extraction.scala:564)
+	at org.json4s.Extraction$ClassInstanceBuilder$$anonfun$result$6.apply(Extraction.scala:559)
+	at org.json4s.Extraction$.org$json4s$Extraction$$customOrElse(Extraction.scala:573)
+	at org.json4s.Extraction$ClassInstanceBuilder.result(Extraction.scala:559)
+	at org.json4s.Extraction$.extract(Extraction.scala:394)
+	at org.json4s.Extraction$CollectionBuilder$$anonfun$6.apply(Extraction.scala:403)
+	at org.json4s.Extraction$CollectionBuilder$$anonfun$6.apply(Extraction.scala:403)
+	at scala.collection.immutable.List.map(List.scala:273)
+	at org.json4s.Extraction$CollectionBuilder.mkCollection(Extraction.scala:403)
+	at org.json4s.Extraction$CollectionBuilder.result(Extraction.scala:427)
+	at org.json4s.Extraction$.extract(Extraction.scala:377)
+	at org.json4s.Extraction$.extract(Extraction.scala:43)
+	at org.json4s.ExtractableJsonAstNode.extract(ExtractableJsonAstNode.scala:21)
+	at fi.shika.hackthemeal.controller.MainController$$anonfun$createPortions$1.apply(MainController.scala:35)
+	at fi.shika.hackthemeal.controller.MainController$$anonfun$createPortions$1.apply(MainController.scala:34)
+	at play.api.mvc.Action$.invokeBlock(Action.scala:498)
+	at play.api.mvc.Action$.invokeBlock(Action.scala:495)
+	at play.api.mvc.ActionBuilder$$anon$2.apply(Action.scala:458)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:112)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:112)
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:111)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:110)
+	at scala.Option.map(Option.scala:146)
+	at play.api.mvc.Action$$anonfun$apply$2.apply(Action.scala:110)
+	at play.api.mvc.Action$$anonfun$apply$2.apply(Action.scala:103)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:253)
+	... 14 common frames omitted
+Caused by: org.json4s.package$MappingException: Did not find value which can be converted into java.lang.String
+	at org.json4s.Extraction$.convert(Extraction.scala:671)
+	at org.json4s.Extraction$.extract(Extraction.scala:388)
+	at org.json4s.Extraction$ClassInstanceBuilder.org$json4s$Extraction$ClassInstanceBuilder$$buildCtorArg(Extraction.scala:497)
+	... 50 common frames omitted
+
+>2016-11-12 21:52:24,646 - from play.api.libs.concurrent.ActorSystemProvider in application-akka.actor.default-dispatcher-3 
+Shutdown application default Akka system: application
+
+>2016-11-12 21:52:24,654 - from com.zaxxer.hikari.pool.HikariPool in application-akka.actor.default-dispatcher-6 
+db - is closing down.
+
+>2016-11-12 21:52:24,668 - from play.api.db.slick.DefaultSlickApi in application-akka.actor.default-dispatcher-6 
+Database default was successfully closed.
+
+>2016-11-12 21:52:24,862 - from play.api.db.slick.DefaultSlickApi in application-akka.actor.default-dispatcher-3 
+Created Slick database config for key default.
+
+>2016-11-12 21:52:24,865 - from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-3 
+db - is starting.
+
+>2016-11-12 21:52:24,873 - from application in application-akka.actor.default-dispatcher-3 
+application.conf @ file:/Users/ashikov/Documents/test/hackthemeal/backend/target/scala-2.11/classes/application.conf: 29: parsers.text.maxLength is deprecated, use play.http.parser.maxMemoryBuffer instead
+
+>2016-11-12 21:52:24,970 - from fi.shika.hackthemeal.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-1 
+Checking table named hackthemeal_dish
+
+>2016-11-12 21:52:24,975 - from fi.shika.hackthemeal.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-1 
+Checking table named hackthemeal_diner
+
+>2016-11-12 21:52:24,975 - from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-2 
+Slf4jLogger started
+
+>2016-11-12 21:52:24,977 - from fi.shika.hackthemeal.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-1 
+Checking table named hackthemeal_portion
+
+>2016-11-12 21:52:24,979 - from play.api.libs.concurrent.ActorSystemProvider in application-akka.actor.default-dispatcher-3 
+Starting application default Akka system: application
+
+>2016-11-12 21:52:24,979 - from fi.shika.hackthemeal.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-1 
+Creating table named hackthemeal_portion
+
+>2016-11-12 21:52:24,980 - from play.api.Play in application-akka.actor.default-dispatcher-3 
+Application started (Dev)
+
+>2016-11-12 21:57:13,784 - from play.api.libs.concurrent.ActorSystemProvider in application-akka.actor.default-dispatcher-6 
+Shutdown application default Akka system: application
+
+>2016-11-12 21:57:13,791 - from com.zaxxer.hikari.pool.HikariPool in application-akka.actor.default-dispatcher-12 
+db - is closing down.
+
+>2016-11-12 21:57:13,805 - from play.api.db.slick.DefaultSlickApi in application-akka.actor.default-dispatcher-12 
+Database default was successfully closed.
+
+>2016-11-12 21:57:14,025 - from play.api.db.slick.DefaultSlickApi in application-akka.actor.default-dispatcher-6 
+Created Slick database config for key default.
+
+>2016-11-12 21:57:14,027 - from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-6 
+db - is starting.
+
+>2016-11-12 21:57:14,030 - from application in application-akka.actor.default-dispatcher-6 
+application.conf @ file:/Users/ashikov/Documents/test/hackthemeal/backend/target/scala-2.11/classes/application.conf: 29: parsers.text.maxLength is deprecated, use play.http.parser.maxMemoryBuffer instead
+
+>2016-11-12 21:57:14,109 - from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-2 
+Slf4jLogger started
+
+>2016-11-12 21:57:14,114 - from play.api.libs.concurrent.ActorSystemProvider in application-akka.actor.default-dispatcher-6 
+Starting application default Akka system: application
+
+>2016-11-12 21:57:14,117 - from play.api.Play in application-akka.actor.default-dispatcher-6 
+Application started (Dev)
+
+>2016-11-12 21:57:14,141 - from fi.shika.hackthemeal.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-2 
+Checking table named hackthemeal_dish
+
+>2016-11-12 21:57:14,146 - from fi.shika.hackthemeal.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-2 
+Checking table named hackthemeal_diner
+
+>2016-11-12 21:57:14,148 - from fi.shika.hackthemeal.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-2 
+Checking table named hackthemeal_portion
+
+>2016-11-12 21:57:14,155 - from fi.shika.hackthemeal.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-2 
+Creating table named hackthemeal_portion
+
+>2016-11-12 21:59:51,321 - from play.api.libs.concurrent.ActorSystemProvider in application-akka.actor.default-dispatcher-2 
+Shutdown application default Akka system: application
+
+>2016-11-12 21:59:51,328 - from com.zaxxer.hikari.pool.HikariPool in application-akka.actor.default-dispatcher-7 
+db - is closing down.
+
+>2016-11-12 21:59:51,352 - from play.api.db.slick.DefaultSlickApi in application-akka.actor.default-dispatcher-7 
+Database default was successfully closed.
+
+>2016-11-12 21:59:51,516 - from play.api.db.slick.DefaultSlickApi in application-akka.actor.default-dispatcher-2 
+Created Slick database config for key default.
+
+>2016-11-12 21:59:51,517 - from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-2 
+db - is starting.
+
+>2016-11-12 21:59:51,523 - from application in application-akka.actor.default-dispatcher-2 
+application.conf @ file:/Users/ashikov/Documents/test/hackthemeal/backend/target/scala-2.11/classes/application.conf: 29: parsers.text.maxLength is deprecated, use play.http.parser.maxMemoryBuffer instead
+
+>2016-11-12 21:59:51,565 - from fi.shika.hackthemeal.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-3 
+Checking table named hackthemeal_dish
+
+>2016-11-12 21:59:51,572 - from fi.shika.hackthemeal.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-3 
+Checking table named hackthemeal_diner
+
+>2016-11-12 21:59:51,577 - from fi.shika.hackthemeal.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-3 
+Checking table named hackthemeal_portion
+
+>2016-11-12 21:59:51,579 - from fi.shika.hackthemeal.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-3 
+Creating table named hackthemeal_portion
+
+>2016-11-12 21:59:51,604 - from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-2 
+Slf4jLogger started
+
+>2016-11-12 21:59:51,606 - from play.api.libs.concurrent.ActorSystemProvider in application-akka.actor.default-dispatcher-2 
+Starting application default Akka system: application
+
+>2016-11-12 21:59:51,608 - from play.api.Play in application-akka.actor.default-dispatcher-2 
+Application started (Dev)
+
+>2016-11-12 22:00:07,889 - from application in application-akka.actor.default-dispatcher-6 
+
+
+! @723gnl9ke - Internal server error, for (POST) [/portions/] ->
+ 
+play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[PSQLException: ERROR: insert or update on table "hackthemeal_portion" violates foreign key constraint "dinerFK"
+  Detail: Key (dinerId)=(143) is not present in table "hackthemeal_diner".]]
+	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:280)
+	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:206)
+	at play.api.GlobalSettings$class.onError(GlobalSettings.scala:160)
+	at play.api.DefaultGlobal$.onError(GlobalSettings.scala:188)
+	at play.api.http.GlobalSettingsHttpErrorHandler.onServerError(HttpErrorHandler.scala:98)
+	at play.core.server.netty.PlayRequestHandler$$anonfun$2$$anonfun$apply$1.applyOrElse(PlayRequestHandler.scala:100)
+	at play.core.server.netty.PlayRequestHandler$$anonfun$2$$anonfun$apply$1.applyOrElse(PlayRequestHandler.scala:99)
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:346)
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:345)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:70)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248)
+	at scala.concurrent.Promise$class.complete(Promise.scala:55)
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153)
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:237)
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:237)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:91)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:90)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:39)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:405)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+Caused by: org.postgresql.util.PSQLException: ERROR: insert or update on table "hackthemeal_portion" violates foreign key constraint "dinerFK"
+  Detail: Key (dinerId)=(143) is not present in table "hackthemeal_diner".
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2310)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2023)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:217)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:421)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:166)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:137)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at slick.driver.JdbcActionComponent$InsertActionComposerImpl$MultiInsertAction$$anonfun$run$8$$anonfun$apply$1.apply(JdbcActionComponent.scala:520)
+	at slick.driver.JdbcActionComponent$InsertActionComposerImpl$MultiInsertAction$$anonfun$run$8$$anonfun$apply$1.apply(JdbcActionComponent.scala:517)
+	at slick.jdbc.JdbcBackend$SessionDef$class.withPreparedInsertStatement(JdbcBackend.scala:354)
+	at slick.jdbc.JdbcBackend$BaseSession.withPreparedInsertStatement(JdbcBackend.scala:407)
+	at slick.driver.JdbcActionComponent$ReturningInsertActionComposerImpl.preparedInsert(JdbcActionComponent.scala:636)
+	at slick.driver.JdbcActionComponent$InsertActionComposerImpl$MultiInsertAction$$anonfun$run$8.apply(JdbcActionComponent.scala:517)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.immutable.List.foreach(List.scala:381)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:234)
+	at scala.collection.immutable.List.map(List.scala:285)
+	at slick.driver.JdbcActionComponent$InsertActionComposerImpl$MultiInsertAction.run(JdbcActionComponent.scala:522)
+	at slick.driver.JdbcActionComponent$SimpleJdbcDriverAction.run(JdbcActionComponent.scala:32)
+	at slick.driver.JdbcActionComponent$SimpleJdbcDriverAction.run(JdbcActionComponent.scala:29)
+	at slick.backend.DatabaseComponent$DatabaseDef$$anon$2.liftedTree1$1(DatabaseComponent.scala:237)
+	at slick.backend.DatabaseComponent$DatabaseDef$$anon$2.run(DatabaseComponent.scala:237)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+>2016-11-12 22:02:21,278 - from play.api.libs.concurrent.ActorSystemProvider in application-akka.actor.default-dispatcher-5 
+Shutdown application default Akka system: application
+
+>2016-11-12 22:02:21,300 - from com.zaxxer.hikari.pool.HikariPool in application-akka.actor.default-dispatcher-7 
+db - is closing down.
+
+>2016-11-12 22:02:21,327 - from play.api.db.slick.DefaultSlickApi in application-akka.actor.default-dispatcher-7 
+Database default was successfully closed.
+
+>2016-11-12 22:02:21,557 - from play.api.db.slick.DefaultSlickApi in application-akka.actor.default-dispatcher-5 
+Created Slick database config for key default.
+
+>2016-11-12 22:02:21,558 - from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-5 
+db - is starting.
+
+>2016-11-12 22:02:21,563 - from application in application-akka.actor.default-dispatcher-5 
+application.conf @ file:/Users/ashikov/Documents/test/hackthemeal/backend/target/scala-2.11/classes/application.conf: 29: parsers.text.maxLength is deprecated, use play.http.parser.maxMemoryBuffer instead
+
+>2016-11-12 22:02:21,665 - from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-2 
+Slf4jLogger started
+
+>2016-11-12 22:02:21,709 - from fi.shika.hackthemeal.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-0 
+Checking table named hackthemeal_dish
+
+>2016-11-12 22:02:21,714 - from fi.shika.hackthemeal.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-0 
+Creating table named hackthemeal_dish
+
+>2016-11-12 22:02:21,725 - from fi.shika.hackthemeal.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-0 
+Checking table named hackthemeal_diner
+
+>2016-11-12 22:02:21,726 - from fi.shika.hackthemeal.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-0 
+Creating table named hackthemeal_diner
+
+>2016-11-12 22:02:21,748 - from fi.shika.hackthemeal.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-0 
+Checking table named hackthemeal_portion
+
+>2016-11-12 22:02:21,749 - from fi.shika.hackthemeal.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-0 
+Creating table named hackthemeal_portion
+
+>2016-11-12 22:02:21,760 - from play.api.libs.concurrent.ActorSystemProvider in application-akka.actor.default-dispatcher-5 
+Starting application default Akka system: application
+
+>2016-11-12 22:02:21,763 - from play.api.Play in application-akka.actor.default-dispatcher-5 
 Application started (Dev)
 

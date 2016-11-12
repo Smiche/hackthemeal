@@ -1,4 +1,4 @@
-package fi.shika.schedule.persistence.profile
+package fi.shika.hackthemeal.persistence.profile
 
 import play.api.db.slick.DatabaseConfigProvider
 import slick.driver.JdbcProfile
