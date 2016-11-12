@@ -16,6 +16,7 @@ gen
 .history
 .lib/
 dist/*
+logs/
 target/
 lib_managed/
 src_managed/

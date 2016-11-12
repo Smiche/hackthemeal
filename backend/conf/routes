@@ -5,3 +5,5 @@
 POST     /dishes/                     @fi.shika.hackthemeal.controller.MainController.createDishes
 POST     /diners/                     @fi.shika.hackthemeal.controller.MainController.createDiners
 POST     /portions/                   @fi.shika.hackthemeal.controller.MainController.createPortions
+GET      /portions/                   @fi.shika.hackthemeal.controller.MainController.getPortionMoments
+POST     /portions/dates/             @fi.shika.hackthemeal.controller.MainController.getPortionDates

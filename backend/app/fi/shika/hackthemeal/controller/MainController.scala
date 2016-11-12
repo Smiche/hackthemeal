@@ -1,10 +1,13 @@
 package fi.shika.hackthemeal.controller
 
+import java.util.Date
+
 import com.github.tototoshi.play2.json4s.Json4s
 import com.google.inject.Inject
 import fi.shika.hackthemeal.formats.JsonFormats
 import fi.shika.hackthemeal.persistence.Storage
 import fi.shika.hackthemeal.persistence.model.{Diner, Dish, Portion}
+import fi.shika.hackthemeal.request.DateIntervalRequest
 import org.json4s._
 import org.json4s.ext.JodaTimeSerializers
 import play.api.Logger
@@ -34,5 +37,23 @@ class MainController @Inject()(val storage: Storage, json4s: Json4s)(implicit va
   def createPortions = Action.async(json) { implicit request =>
     storage.createPortions(request.body.extract[Seq[Portion]])
       .map (s => Ok(s"Created ${s.size}"))
+  }
+
+  def getPortionMoments = Action.async { implicit request =>
+    storage.portionMoments.map { moments =>
+      val result = (1 to 7).map { dayToCount =>
+        moments.count(_.dayOfWeek().get() == dayToCount)
+      }
+      Ok(Extraction.decompose(result))
+    }
+  }
+
+  def getPortionDates = Action.async(json) { implicit request =>
+    val data = request.body.extract[DateIntervalRequest]
+    storage.portionMoments(data.start, data.end).map { moments =>
+      val result = moments.groupBy(_.toLocalDate.toDate.getTime)
+        .map { it => new Date(it._1) -> it._2.size }
+      Ok(Extraction.decompose(result))
+    }
   }
 }
