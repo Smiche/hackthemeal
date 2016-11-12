@@ -5,12 +5,12 @@
 (function () {
   'use strict';
 
-  angular.module('BlurAdmin.pages.charts.chartist')
+  angular.module('BlurAdmin.pages.dashboard')
     .controller('chartistCtrl', chartistCtrl);
 
   /** @ngInject */
   function chartistCtrl($scope, $timeout, baConfig) {
-
+    console.log('hello');
     $scope.simpleLineOptions = {
       color: baConfig.colors.defaultText,
       fullWidth: true,
@@ -23,7 +23,7 @@
     $scope.simpleLineData = {
       labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
       series: [
-        [20, 20, 12, 45, 50],
+        [12, 15, 22, 18, 8],
         //[10, 45, 30, 14, 12],
         //[34, 12, 12, 40, 50],
         //[10, 43, 25, 22, 16],

@@ -6,42 +6,42 @@
   'use strict';
 
   angular.module('BlurAdmin.pages.dashboard')
-      .controller('BlurFeedCtrl', BlurFeedCtrl);
+      .controller('BlurFeedCtrlz', BlurFeedCtrlz);
 
   /** @ngInject */
-  function BlurFeedCtrl($scope) {
+  function BlurFeedCtrlz($scope) {
     $scope.feed = [
       {
         type: 'text-message',
-        author: 'Pizza',
+        author: 'Mashed potato',
         header: 'Posted new message',
-        text: 'Kebab pizza',
-        time: '',
+        text: '',
+        time: 'Last served',
         ago: 'Yesterday',
         expanded: false,
       }, {
         type: 'text-message',
-        author: 'Tarragon chicken',
+        author: 'Cheese sausage',
         header: 'Added new video',
-        text: 'Chicken with tarragon sauce',
-        time: '',
-        ago: 'Yesterday',
+        text: 'Sausage backed with cheese',
+        time: 'Last served:',
+        ago: '13 Oct',
         expanded: false,
-      },{
+      }, {
         type: 'text-message',
-        author: 'Sauce sausages',
+        author: 'Carbonara',
         header: 'Added new video',
-        text: 'Small slices of sausages in sauce',
-        time: '',
-        ago: '10 Nov',
+        text: 'Pasta Carbonara',
+        time: 'Last served:',
+        ago: '14 April',
         expanded: false,
-      },{
+      }, {
         type: 'text-message',
-        author: 'Grilled beef',
+        author: 'Pizza',
         header: 'Added new video',
-        text: 'Grilled beef with baked cheese',
-        time: '',
-        ago: '10 Nov',
+        text: 'Kebab pizza',
+        time: 'Last served:',
+        ago: '26 September',
         expanded: false,
       },
     ];

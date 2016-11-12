@@ -1,4 +1,6 @@
-<dashboard-pie-chart></dashboard-pie-chart>
+
+
+<!-- <dashboard-pie-chart></dashboard-pie-chart>
 
 <div class="row">
   <div class="col-lg-12 col-md-12 col-sm-12"
@@ -7,6 +9,13 @@
        ba-panel-class="medium-panel traffic-panel">
     <traffic-chart></traffic-chart>
   </div>
+
+  <div class="col-xlg-3 col-lg-6 col-md-6 col-sm-12 col-xs-12"
+       ba-panel
+       ba-panel-title="Last food you've taken"
+       ba-panel-class="large-panel with-scroll feed-panel">
+    <blur-feed></blur-feed>
+  </div> -->
   <!--
   <div class="col-lg-6 col-md-12 col-sm-12"
        ba-panel
@@ -14,7 +23,6 @@
        ba-panel-class="medium-panel">
     <dashboard-map></dashboard-map>
   </div> -->
-
        <!-- <div class="col-xlg-6 col-lg-10 col-md-12 col-sm-12 col-xs-12"
            ba-panel
            ba-panel-title="Report quantity"
@@ -24,7 +32,7 @@
 </div> -->
 
 <div class="row">
-  <div class="col-xlg-9 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+  <!-- <div class="col-xlg-9 col-lg-6 col-md-6 col-sm-12 col-xs-12">
     <div class="row">
       <div class="col-xlg-6 col-lg-12 col-md-12 col-sm-7 col-xs-12"
            ba-panel
@@ -32,27 +40,42 @@
            ba-panel-class="medium-panel">
         <dashboard-line-chart></dashboard-line-chart>
       </div>
-<div class="col-md-6">
-  <uib-accordion>
-
-  <uib-accordion-group heading="Dynamic Body Content" panel-class="bootstrap-panel accordion-panel panel-default">
-
+      <div class="col-xlg-6 col-lg-12 col-md-12 col-sm-5 col-xs-12"
+           ba-panel
+           ba-panel-class="popular-app medium-panel">
         <popular-app></popular-app>
- </uib-accordion-group>
- </uib-accordion>
-</div>
-      
-    </div>
-  </div>
+      </div>
+   </div>
+  </div> -->
   <div class="col-xlg-3 col-lg-6 col-md-6 col-sm-12 col-xs-12"
        ba-panel
-       ba-panel-title="Last food you've taken"
-       ba-panel-class="large-panel with-scroll feed-panel">
+       ba-panel-title="History"
+       ba-panel-class="medium-panel with-scroll feed-panel">
     <blur-feed></blur-feed>
+  </div>
+
+  <div class="col-xlg-3 col-lg-6 col-md-6 col-sm-12 col-xs-12"
+       ba-panel-class="medium-panel">
+    <chartist-chart></chartist-chart>
   </div>
 </div>
 
-<div class="row shift-up">
+<div class="row">
+    <div class="col-xlg-3 col-lg-6 col-md-6 col-sm-12 col-xs-12"
+        ba-panel
+        ba-panel-title="Most liked food of all times"
+        ba-panel-class="medium-panel feed-panel">
+      <blur-feedz></blur-feedz>
+    </div>
+    <div class="col-xlg-3 col-lg-6 col-md-6 col-sm-12 col-xs-12"
+        ba-panel
+        ba-panel-title="Most liked food per day"
+        ba-panel-class="medium-panel with-scroll feed-panel">
+      <blur-feedzy></blur-feedzy>
+    </div>
+</div>
+
+<!-- <div class="row shift-up">
   <div class="col-xlg-3 col-lg-6 col-md-6 col-xs-12"
        ba-panel
        ba-panel-title="Your notes"
@@ -67,7 +90,7 @@
   </div>
 </div>
 
-<!--<div class="row">
+<div class="row">
   <div class="col-lg-4 col-sm-6 col-xs-12">
     <div ba-panel ba-panel-title="Weather" ba-panel-class="medium-panel with-scroll">
       <blur-weather forecast="5"></blur-weather>
