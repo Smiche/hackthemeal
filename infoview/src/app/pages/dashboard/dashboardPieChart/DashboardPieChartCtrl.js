@@ -14,20 +14,10 @@
     var pieColor = baUtil.hexToRGB(baConfig.colors.defaultText, 0.2);
     $scope.charts = [{
       color: pieColor,
-      description: 'Reports today: ',
-      stats: '% this month',
+      description: "You've eaten: ",
+      stats: '% of your goal',
       icon: 'person',
     }, {
-        color: pieColor,
-        description: 'Completed today: ',
-        stats: '% this month',
-        icon: 'face',
-      }, {
-        color: pieColor,
-        description: 'Users: ',
-        stats: '',
-        icon: 'person',
-      }, {
         color: pieColor,
         description: 'Last update',
         stats: getTimeString(new Date),
