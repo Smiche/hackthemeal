@@ -1,0 +1,9 @@
+body {font-family: arial; background-color: white; }
+h1 { background-color:#AB2567; border: 1px solid; color:#FFF; text-align: center;}
+table { background-color: #F60; border: 1px solid #39F; width: 100%;}
+td {border: 0px; text-align: center;}
+#meal { color:#000; text-indent: 20px; font-size: 260%;}
+#diet { color: #00F; font-size: 200%;}
+#origin { color:#0F0; font-size: 150%;}
+#energy { color:#F00; font-size:200%;}
+img {position: absolute; left: 420px; top:150px; z-index: -1;} 
