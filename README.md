@@ -5,7 +5,7 @@ Project for hackathon.
 The MIT License (MIT)
 =====================
 
-Copyright © `2016` `Andey, Aleksandar, Maksim`
+Copyright © `2016` `Andrei, Aleksandar, Maksim`
 
 Permission is hereby granted, free of charge, to any person
 obtaining a copy of this software and associated documentation
