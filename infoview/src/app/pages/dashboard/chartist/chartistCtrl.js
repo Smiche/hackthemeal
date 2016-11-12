@@ -26,7 +26,7 @@
       $scope.simpleLineData = {
         labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
         series: [
-          res.slice(0,-2),
+          res.slice(0, -2),
           //[10, 45, 30, 14, 12],
           //[34, 12, 12, 40, 50],
           //[10, 43, 25, 22, 16],

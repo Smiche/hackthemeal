@@ -1,406 +1,347 @@
-2016-11-12 23:32:26,973 [INFO] from play.core.server.NettyServer in pool-4-thread-4 - Listening for HTTP on /0:0:0:0:0:0:0:0:9000
->2016-11-12 23:32:30,160 - from play.api.db.slick.DefaultSlickApi in ForkJoinPool-1-worker-1 
+2016-11-13 00:36:48,381 [ERROR] from play.core.server.NettyServer in pool-4-thread-3 - Failed to listen for HTTP on /0.0.0.0:9000!
+>2016-11-13 00:37:07,447 - from play.api.db.slick.DefaultSlickApi in application-akka.actor.default-dispatcher-2 
 Created Slick database config for key default.
 
->2016-11-12 23:32:30,194 - from com.zaxxer.hikari.HikariDataSource in ForkJoinPool-1-worker-1 
+>2016-11-13 00:37:07,447 - from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-2 
 db - is starting.
 
->2016-11-12 23:32:30,427 - from application in ForkJoinPool-1-worker-1 
+>2016-11-13 00:37:07,451 - from application in application-akka.actor.default-dispatcher-2 
 application.conf @ file:/Users/ashikov/Documents/test/hackthemeal/backend/target/scala-2.11/classes/application.conf: 29: parsers.text.maxLength is deprecated, use play.http.parser.maxMemoryBuffer instead
 
->2016-11-12 23:32:30,705 - from fi.shika.hackthemeal.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-2 
+>2016-11-13 00:37:07,562 - from fi.shika.hackthemeal.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-3 
 Checking table named hackthemeal_dish
 
->2016-11-12 23:32:30,721 - from fi.shika.hackthemeal.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-2 
+>2016-11-13 00:37:07,627 - from fi.shika.hackthemeal.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-3 
 Checking table named hackthemeal_diner
 
->2016-11-12 23:32:30,726 - from fi.shika.hackthemeal.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-2 
+>2016-11-13 00:37:07,734 - from fi.shika.hackthemeal.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-3 
 Checking table named hackthemeal_portion
 
->2016-11-12 23:32:31,053 - from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-2 
+>2016-11-13 00:37:07,760 - from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-3 
 Slf4jLogger started
 
->2016-11-12 23:32:31,056 - from play.api.libs.concurrent.ActorSystemProvider in ForkJoinPool-1-worker-1 
+>2016-11-13 00:37:07,767 - from play.api.libs.concurrent.ActorSystemProvider in application-akka.actor.default-dispatcher-2 
 Starting application default Akka system: application
 
->2016-11-12 23:32:31,067 - from play.api.Play in ForkJoinPool-1-worker-1 
+>2016-11-13 00:37:07,769 - from play.api.Play in application-akka.actor.default-dispatcher-2 
 Application started (Dev)
 
->2016-11-12 23:32:38,455 - from fi.shika.hackthemeal.controller.MainController in application-akka.actor.default-dispatcher-2 
-758
-
->2016-11-12 23:35:58,117 - from play.api.libs.concurrent.ActorSystemProvider in application-akka.actor.default-dispatcher-5 
+>2016-11-13 00:37:41,185 - from play.api.libs.concurrent.ActorSystemProvider in application-akka.actor.default-dispatcher-2 
 Shutdown application default Akka system: application
 
->2016-11-12 23:35:58,174 - from com.zaxxer.hikari.pool.HikariPool in application-akka.actor.default-dispatcher-7 
+>2016-11-13 00:37:41,194 - from com.zaxxer.hikari.pool.HikariPool in application-akka.actor.default-dispatcher-6 
 db - is closing down.
 
->2016-11-12 23:35:58,198 - from play.api.db.slick.DefaultSlickApi in application-akka.actor.default-dispatcher-7 
+>2016-11-13 00:37:41,198 - from play.api.db.slick.DefaultSlickApi in application-akka.actor.default-dispatcher-6 
 Database default was successfully closed.
 
->2016-11-12 23:35:58,473 - from play.api.db.slick.DefaultSlickApi in application-akka.actor.default-dispatcher-5 
+>2016-11-13 00:37:41,372 - from play.api.db.slick.DefaultSlickApi in application-akka.actor.default-dispatcher-2 
 Created Slick database config for key default.
 
->2016-11-12 23:35:58,476 - from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-5 
+>2016-11-13 00:37:41,373 - from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-2 
 db - is starting.
 
->2016-11-12 23:35:58,479 - from application in application-akka.actor.default-dispatcher-5 
+>2016-11-13 00:37:41,375 - from application in application-akka.actor.default-dispatcher-2 
 application.conf @ file:/Users/ashikov/Documents/test/hackthemeal/backend/target/scala-2.11/classes/application.conf: 29: parsers.text.maxLength is deprecated, use play.http.parser.maxMemoryBuffer instead
 
->2016-11-12 23:35:58,547 - from fi.shika.hackthemeal.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-3 
+>2016-11-13 00:37:41,441 - from fi.shika.hackthemeal.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-0 
 Checking table named hackthemeal_dish
 
->2016-11-12 23:35:58,562 - from fi.shika.hackthemeal.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-3 
+>2016-11-13 00:37:41,444 - from fi.shika.hackthemeal.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-0 
 Checking table named hackthemeal_diner
 
->2016-11-12 23:35:58,564 - from fi.shika.hackthemeal.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-3 
+>2016-11-13 00:37:41,446 - from fi.shika.hackthemeal.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-0 
 Checking table named hackthemeal_portion
 
->2016-11-12 23:35:58,715 - from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-3 
+>2016-11-13 00:37:41,455 - from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-2 
 Slf4jLogger started
 
->2016-11-12 23:35:58,743 - from play.api.libs.concurrent.ActorSystemProvider in application-akka.actor.default-dispatcher-5 
+>2016-11-13 00:37:41,457 - from play.api.libs.concurrent.ActorSystemProvider in application-akka.actor.default-dispatcher-2 
 Starting application default Akka system: application
 
->2016-11-12 23:35:58,748 - from play.api.Play in application-akka.actor.default-dispatcher-5 
+>2016-11-13 00:37:41,458 - from play.api.Play in application-akka.actor.default-dispatcher-2 
 Application started (Dev)
 
->2016-11-12 23:38:24,746 - from play.api.libs.concurrent.ActorSystemProvider in application-akka.actor.default-dispatcher-4 
-Shutdown application default Akka system: application
-
->2016-11-12 23:38:24,756 - from com.zaxxer.hikari.pool.HikariPool in application-akka.actor.default-dispatcher-7 
-db - is closing down.
-
->2016-11-12 23:38:24,781 - from play.api.db.slick.DefaultSlickApi in application-akka.actor.default-dispatcher-7 
-Database default was successfully closed.
-
->2016-11-12 23:38:25,003 - from play.api.db.slick.DefaultSlickApi in application-akka.actor.default-dispatcher-4 
-Created Slick database config for key default.
-
->2016-11-12 23:38:25,003 - from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-4 
-db - is starting.
-
->2016-11-12 23:38:25,006 - from application in application-akka.actor.default-dispatcher-4 
-application.conf @ file:/Users/ashikov/Documents/test/hackthemeal/backend/target/scala-2.11/classes/application.conf: 29: parsers.text.maxLength is deprecated, use play.http.parser.maxMemoryBuffer instead
-
->2016-11-12 23:38:25,123 - from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-2 
-Slf4jLogger started
-
->2016-11-12 23:38:25,184 - from play.api.libs.concurrent.ActorSystemProvider in application-akka.actor.default-dispatcher-4 
-Starting application default Akka system: application
-
->2016-11-12 23:38:25,190 - from play.api.Play in application-akka.actor.default-dispatcher-4 
-Application started (Dev)
-
->2016-11-12 23:38:25,206 - from fi.shika.hackthemeal.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-0 
-Checking table named hackthemeal_dish
-
->2016-11-12 23:38:25,267 - from fi.shika.hackthemeal.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-0 
-Checking table named hackthemeal_diner
-
->2016-11-12 23:38:25,272 - from fi.shika.hackthemeal.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-0 
-Checking table named hackthemeal_portion
-
->2016-11-12 23:38:25,361 - from application in application-akka.actor.default-dispatcher-4 
+>2016-11-13 00:37:57,666 - from application in netty-event-loop-5 
 
 
-! @723hainm1 - Internal server error, for (POST) [/portions/dates/] ->
+! @723hie44f - Internal server error, for (GET) [/] ->
  
-play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[MappingException: Do not know how to serialize key of type class org.joda.time.LocalDate. Consider implementing a CustomKeySerializer.]]
-	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:280)
-	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:206)
-	at play.api.GlobalSettings$class.onError(GlobalSettings.scala:160)
-	at play.api.DefaultGlobal$.onError(GlobalSettings.scala:188)
-	at play.api.http.GlobalSettingsHttpErrorHandler.onServerError(HttpErrorHandler.scala:98)
-	at play.core.server.netty.PlayRequestHandler$$anonfun$2$$anonfun$apply$1.applyOrElse(PlayRequestHandler.scala:100)
-	at play.core.server.netty.PlayRequestHandler$$anonfun$2$$anonfun$apply$1.applyOrElse(PlayRequestHandler.scala:99)
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:346)
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:345)
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
-	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:70)
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40)
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248)
-	at scala.concurrent.Promise$class.complete(Promise.scala:55)
-	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153)
-	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:237)
-	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:237)
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
-	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55)
-	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:91)
-	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)
-	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)
-	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72)
-	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:90)
+play.sbt.routes.RoutesCompilationException: Compilation error[Identifier expected]
+	at play.sbt.routes.RoutesCompiler$$anonfun$9.apply(RoutesCompiler.scala:152)
+	at play.sbt.routes.RoutesCompiler$$anonfun$9.apply(RoutesCompiler.scala:150)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+	at scala.collection.immutable.List.foreach(List.scala:318)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:244)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:105)
+	at play.sbt.routes.RoutesCompiler$.compileRoutes(RoutesCompiler.scala:150)
+	at play.sbt.routes.RoutesCompiler$$anonfun$4.apply(RoutesCompiler.scala:127)
+	at play.sbt.routes.RoutesCompiler$$anonfun$4.apply(RoutesCompiler.scala:126)
+	at scala.Function1$$anonfun$compose$1.apply(Function1.scala:47)
+	at sbt.$tilde$greater$$anonfun$$u2219$1.apply(TypeFunctions.scala:40)
+	at sbt.std.Transform$$anon$4.work(System.scala:63)
+	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228)
+	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228)
+	at sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:17)
+	at sbt.Execute.work(Execute.scala:237)
+	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228)
+	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228)
+	at sbt.ConcurrentRestrictions$$anon$4$$anonfun$1.apply(ConcurrentRestrictions.scala:159)
+	at sbt.CompletionService$$anon$2.call(CompletionService.scala:28)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+>2016-11-13 00:38:28,444 - from application in netty-event-loop-5 
+
+
+! @723hifmoh - Internal server error, for (GET) [/] ->
+ 
+play.sbt.routes.RoutesCompilationException: Compilation error[Identifier expected]
+	at play.sbt.routes.RoutesCompiler$$anonfun$9.apply(RoutesCompiler.scala:152)
+	at play.sbt.routes.RoutesCompiler$$anonfun$9.apply(RoutesCompiler.scala:150)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+	at scala.collection.immutable.List.foreach(List.scala:318)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:244)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:105)
+	at play.sbt.routes.RoutesCompiler$.compileRoutes(RoutesCompiler.scala:150)
+	at play.sbt.routes.RoutesCompiler$$anonfun$4.apply(RoutesCompiler.scala:127)
+	at play.sbt.routes.RoutesCompiler$$anonfun$4.apply(RoutesCompiler.scala:126)
+	at scala.Function1$$anonfun$compose$1.apply(Function1.scala:47)
+	at sbt.$tilde$greater$$anonfun$$u2219$1.apply(TypeFunctions.scala:40)
+	at sbt.std.Transform$$anon$4.work(System.scala:63)
+	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228)
+	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228)
+	at sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:17)
+	at sbt.Execute.work(Execute.scala:237)
+	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228)
+	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228)
+	at sbt.ConcurrentRestrictions$$anon$4$$anonfun$1.apply(ConcurrentRestrictions.scala:159)
+	at sbt.CompletionService$$anon$2.call(CompletionService.scala:28)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+>2016-11-13 00:38:32,621 - from application in netty-event-loop-5 
+
+
+! @723hig3pb - Internal server error, for (GET) [/] ->
+ 
+play.sbt.routes.RoutesCompilationException: Compilation error[Using different overloaded methods is not allowed. If you are using a single method in combination with default parameters, make sure you declare them all explicitly.]
+	at play.sbt.routes.RoutesCompiler$$anonfun$9.apply(RoutesCompiler.scala:152)
+	at play.sbt.routes.RoutesCompiler$$anonfun$9.apply(RoutesCompiler.scala:150)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+	at scala.collection.immutable.List.foreach(List.scala:318)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:244)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:105)
+	at play.sbt.routes.RoutesCompiler$.compileRoutes(RoutesCompiler.scala:150)
+	at play.sbt.routes.RoutesCompiler$$anonfun$4.apply(RoutesCompiler.scala:127)
+	at play.sbt.routes.RoutesCompiler$$anonfun$4.apply(RoutesCompiler.scala:126)
+	at scala.Function1$$anonfun$compose$1.apply(Function1.scala:47)
+	at sbt.$tilde$greater$$anonfun$$u2219$1.apply(TypeFunctions.scala:40)
+	at sbt.std.Transform$$anon$4.work(System.scala:63)
+	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228)
+	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228)
+	at sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:17)
+	at sbt.Execute.work(Execute.scala:237)
+	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228)
+	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228)
+	at sbt.ConcurrentRestrictions$$anon$4$$anonfun$1.apply(ConcurrentRestrictions.scala:159)
+	at sbt.CompletionService$$anon$2.call(CompletionService.scala:28)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+>2016-11-13 00:39:13,612 - from application in netty-event-loop-5 
+
+
+! @723hiichh - Internal server error, for (GET) [/] ->
+ 
+play.sbt.PlayExceptions$CompilationException: Compilation error[patterns after a variable pattern cannot match (SLS 8.1.1)
+If you intended to match against parameter file of method at, you must use backticks, like: case `file` =>]
+	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27)
+	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27)
+	at scala.Option.map(Option.scala:145)
+	at play.sbt.run.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:49)
+	at play.sbt.run.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:44)
+	at scala.Option.map(Option.scala:145)
+	at play.sbt.run.PlayReload$.taskFailureHandler(PlayReload.scala:44)
+	at play.sbt.run.PlayReload$.compileFailure(PlayReload.scala:40)
+	at play.sbt.run.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17)
+	at play.sbt.run.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17)
+	at scala.util.Either$LeftProjection.map(Either.scala:377)
+	at play.sbt.run.PlayReload$.compile(PlayReload.scala:17)
+	at play.sbt.run.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61)
+	at play.sbt.run.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61)
+	at play.runsupport.Reloader$$anonfun$reload$1.apply(Reloader.scala:338)
+	at play.runsupport.Reloader$$anon$3.run(Reloader.scala:43)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at play.runsupport.Reloader$.play$runsupport$Reloader$$withReloaderContextClassLoader(Reloader.scala:39)
+	at play.runsupport.Reloader.reload(Reloader.scala:336)
+	at play.core.server.DevServerStart$$anonfun$mainDev$1$$anon$1$$anonfun$get$1.apply(DevServerStart.scala:118)
+	at play.core.server.DevServerStart$$anonfun$mainDev$1$$anon$1$$anonfun$get$1.apply(DevServerStart.scala:116)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24)
 	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:39)
 	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:405)
 	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
 	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
 	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
 	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
-Caused by: org.json4s.package$MappingException: Do not know how to serialize key of type class org.joda.time.LocalDate. Consider implementing a CustomKeySerializer.
-	at org.json4s.reflect.package$.fail(package.scala:93)
-	at org.json4s.Extraction$.internalDecomposeWithBuilder(Extraction.scala:183)
-	at org.json4s.Extraction$.decomposeWithBuilder(Extraction.scala:68)
-	at org.json4s.Extraction$.decompose(Extraction.scala:246)
-	at fi.shika.hackthemeal.controller.MainController$$anonfun$getPortionDates$1$$anonfun$apply$5.apply(MainController.scala:53)
-	at fi.shika.hackthemeal.controller.MainController$$anonfun$getPortionDates$1$$anonfun$apply$5.apply(MainController.scala:51)
-	at scala.util.Success$$anonfun$map$1.apply(Try.scala:237)
-	at scala.util.Try$.apply(Try.scala:192)
-	at scala.util.Success.map(Try.scala:237)
-	... 15 common frames omitted
 
->2016-11-12 23:38:45,313 - from play.api.libs.concurrent.ActorSystemProvider in application-akka.actor.default-dispatcher-3 
+>2016-11-13 00:40:41,547 - from application in netty-event-loop-3 
+
+
+! @723hincjl - Internal server error, for (GET) [/] ->
+ 
+play.sbt.PlayExceptions$CompilationException: Compilation error[patterns after a variable pattern cannot match (SLS 8.1.1)
+If you intended to match against parameter file of method at, you must use backticks, like: case `file` =>]
+	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27)
+	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27)
+	at scala.Option.map(Option.scala:145)
+	at play.sbt.run.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:49)
+	at play.sbt.run.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:44)
+	at scala.Option.map(Option.scala:145)
+	at play.sbt.run.PlayReload$.taskFailureHandler(PlayReload.scala:44)
+	at play.sbt.run.PlayReload$.compileFailure(PlayReload.scala:40)
+	at play.sbt.run.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17)
+	at play.sbt.run.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17)
+	at scala.util.Either$LeftProjection.map(Either.scala:377)
+	at play.sbt.run.PlayReload$.compile(PlayReload.scala:17)
+	at play.sbt.run.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61)
+	at play.sbt.run.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61)
+	at play.runsupport.Reloader$$anonfun$reload$1.apply(Reloader.scala:338)
+	at play.runsupport.Reloader$$anon$3.run(Reloader.scala:43)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at play.runsupport.Reloader$.play$runsupport$Reloader$$withReloaderContextClassLoader(Reloader.scala:39)
+	at play.runsupport.Reloader.reload(Reloader.scala:336)
+	at play.core.server.DevServerStart$$anonfun$mainDev$1$$anon$1$$anonfun$get$1.apply(DevServerStart.scala:118)
+	at play.core.server.DevServerStart$$anonfun$mainDev$1$$anon$1$$anonfun$get$1.apply(DevServerStart.scala:116)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:39)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:405)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+>2016-11-13 00:41:37,029 - from application in netty-event-loop-3 
+
+
+! @723hj0gjo - Internal server error, for (GET) [/] ->
+ 
+play.sbt.routes.RoutesCompilationException: Compilation error[Controller method call expected]
+	at play.sbt.routes.RoutesCompiler$$anonfun$9.apply(RoutesCompiler.scala:152)
+	at play.sbt.routes.RoutesCompiler$$anonfun$9.apply(RoutesCompiler.scala:150)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244)
+	at scala.collection.immutable.List.foreach(List.scala:318)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:244)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:105)
+	at play.sbt.routes.RoutesCompiler$.compileRoutes(RoutesCompiler.scala:150)
+	at play.sbt.routes.RoutesCompiler$$anonfun$4.apply(RoutesCompiler.scala:127)
+	at play.sbt.routes.RoutesCompiler$$anonfun$4.apply(RoutesCompiler.scala:126)
+	at scala.Function1$$anonfun$compose$1.apply(Function1.scala:47)
+	at sbt.$tilde$greater$$anonfun$$u2219$1.apply(TypeFunctions.scala:40)
+	at sbt.std.Transform$$anon$4.work(System.scala:63)
+	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228)
+	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228)
+	at sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:17)
+	at sbt.Execute.work(Execute.scala:237)
+	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228)
+	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228)
+	at sbt.ConcurrentRestrictions$$anon$4$$anonfun$1.apply(ConcurrentRestrictions.scala:159)
+	at sbt.CompletionService$$anon$2.call(CompletionService.scala:28)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+>2016-11-13 00:42:28,350 - from application in netty-event-loop-3 
+
+
+! @723hj3ejd - Internal server error, for (GET) [/] ->
+ 
+play.sbt.PlayExceptions$CompilationException: Compilation error[patterns after a variable pattern cannot match (SLS 8.1.1)
+If you intended to match against parameter file of method at, you must use backticks, like: case `file` =>]
+	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27)
+	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27)
+	at scala.Option.map(Option.scala:145)
+	at play.sbt.run.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:49)
+	at play.sbt.run.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:44)
+	at scala.Option.map(Option.scala:145)
+	at play.sbt.run.PlayReload$.taskFailureHandler(PlayReload.scala:44)
+	at play.sbt.run.PlayReload$.compileFailure(PlayReload.scala:40)
+	at play.sbt.run.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17)
+	at play.sbt.run.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17)
+	at scala.util.Either$LeftProjection.map(Either.scala:377)
+	at play.sbt.run.PlayReload$.compile(PlayReload.scala:17)
+	at play.sbt.run.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61)
+	at play.sbt.run.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61)
+	at play.runsupport.Reloader$$anonfun$reload$1.apply(Reloader.scala:338)
+	at play.runsupport.Reloader$$anon$3.run(Reloader.scala:43)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at play.runsupport.Reloader$.play$runsupport$Reloader$$withReloaderContextClassLoader(Reloader.scala:39)
+	at play.runsupport.Reloader.reload(Reloader.scala:336)
+	at play.core.server.DevServerStart$$anonfun$mainDev$1$$anon$1$$anonfun$get$1.apply(DevServerStart.scala:118)
+	at play.core.server.DevServerStart$$anonfun$mainDev$1$$anon$1$$anonfun$get$1.apply(DevServerStart.scala:116)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:39)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:405)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+>2016-11-13 00:42:47,469 - from play.api.libs.concurrent.ActorSystemProvider in application-akka.actor.default-dispatcher-4 
 Shutdown application default Akka system: application
 
->2016-11-12 23:38:45,327 - from com.zaxxer.hikari.pool.HikariPool in application-akka.actor.default-dispatcher-6 
+>2016-11-13 00:42:47,480 - from com.zaxxer.hikari.pool.HikariPool in application-akka.actor.default-dispatcher-7 
 db - is closing down.
 
->2016-11-12 23:38:45,362 - from play.api.db.slick.DefaultSlickApi in application-akka.actor.default-dispatcher-6 
+>2016-11-13 00:42:47,482 - from play.api.db.slick.DefaultSlickApi in application-akka.actor.default-dispatcher-7 
 Database default was successfully closed.
 
->2016-11-12 23:38:45,540 - from play.api.db.slick.DefaultSlickApi in application-akka.actor.default-dispatcher-3 
+>2016-11-13 00:42:47,627 - from play.api.db.slick.DefaultSlickApi in application-akka.actor.default-dispatcher-4 
 Created Slick database config for key default.
 
->2016-11-12 23:38:45,541 - from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-3 
+>2016-11-13 00:42:47,628 - from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-4 
 db - is starting.
 
->2016-11-12 23:38:45,555 - from application in application-akka.actor.default-dispatcher-3 
+>2016-11-13 00:42:47,631 - from application in application-akka.actor.default-dispatcher-4 
 application.conf @ file:/Users/ashikov/Documents/test/hackthemeal/backend/target/scala-2.11/classes/application.conf: 29: parsers.text.maxLength is deprecated, use play.http.parser.maxMemoryBuffer instead
 
->2016-11-12 23:38:45,661 - from fi.shika.hackthemeal.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-1 
+>2016-11-13 00:42:47,664 - from fi.shika.hackthemeal.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-1 
 Checking table named hackthemeal_dish
 
->2016-11-12 23:38:45,665 - from fi.shika.hackthemeal.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-1 
+>2016-11-13 00:42:47,666 - from fi.shika.hackthemeal.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-1 
 Checking table named hackthemeal_diner
 
->2016-11-12 23:38:45,667 - from fi.shika.hackthemeal.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-1 
+>2016-11-13 00:42:47,668 - from fi.shika.hackthemeal.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-1 
 Checking table named hackthemeal_portion
 
->2016-11-12 23:38:45,818 - from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-2 
+>2016-11-13 00:42:47,707 - from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-2 
 Slf4jLogger started
 
->2016-11-12 23:38:45,823 - from play.api.libs.concurrent.ActorSystemProvider in application-akka.actor.default-dispatcher-3 
+>2016-11-13 00:42:47,710 - from play.api.libs.concurrent.ActorSystemProvider in application-akka.actor.default-dispatcher-4 
 Starting application default Akka system: application
 
->2016-11-12 23:38:45,824 - from play.api.Play in application-akka.actor.default-dispatcher-3 
+>2016-11-13 00:42:47,710 - from play.api.Play in application-akka.actor.default-dispatcher-4 
 Application started (Dev)
-
->2016-11-12 23:40:10,355 - from play.api.libs.concurrent.ActorSystemProvider in application-akka.actor.default-dispatcher-4 
-Shutdown application default Akka system: application
-
->2016-11-12 23:40:10,362 - from com.zaxxer.hikari.pool.HikariPool in application-akka.actor.default-dispatcher-5 
-db - is closing down.
-
->2016-11-12 23:40:10,370 - from play.api.db.slick.DefaultSlickApi in application-akka.actor.default-dispatcher-5 
-Database default was successfully closed.
-
->2016-11-12 23:40:10,559 - from play.api.db.slick.DefaultSlickApi in application-akka.actor.default-dispatcher-4 
-Created Slick database config for key default.
-
->2016-11-12 23:40:10,560 - from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-4 
-db - is starting.
-
->2016-11-12 23:40:10,563 - from application in application-akka.actor.default-dispatcher-4 
-application.conf @ file:/Users/ashikov/Documents/test/hackthemeal/backend/target/scala-2.11/classes/application.conf: 29: parsers.text.maxLength is deprecated, use play.http.parser.maxMemoryBuffer instead
-
->2016-11-12 23:40:10,698 - from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-2 
-Slf4jLogger started
-
->2016-11-12 23:40:10,706 - from play.api.libs.concurrent.ActorSystemProvider in application-akka.actor.default-dispatcher-4 
-Starting application default Akka system: application
-
->2016-11-12 23:40:10,739 - from fi.shika.hackthemeal.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-2 
-Checking table named hackthemeal_dish
-
->2016-11-12 23:40:10,742 - from fi.shika.hackthemeal.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-2 
-Checking table named hackthemeal_diner
-
->2016-11-12 23:40:10,744 - from fi.shika.hackthemeal.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-2 
-Checking table named hackthemeal_portion
-
->2016-11-12 23:40:10,745 - from play.api.Play in application-akka.actor.default-dispatcher-4 
-Application started (Dev)
-
->2016-11-12 23:41:58,031 - from play.api.libs.concurrent.ActorSystemProvider in application-akka.actor.default-dispatcher-4 
-Shutdown application default Akka system: application
-
->2016-11-12 23:41:58,043 - from com.zaxxer.hikari.pool.HikariPool in application-akka.actor.default-dispatcher-5 
-db - is closing down.
-
->2016-11-12 23:41:58,055 - from play.api.db.slick.DefaultSlickApi in application-akka.actor.default-dispatcher-5 
-Database default was successfully closed.
-
->2016-11-12 23:41:58,341 - from play.api.db.slick.DefaultSlickApi in application-akka.actor.default-dispatcher-4 
-Created Slick database config for key default.
-
->2016-11-12 23:41:58,342 - from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-4 
-db - is starting.
-
->2016-11-12 23:41:58,352 - from application in application-akka.actor.default-dispatcher-4 
-application.conf @ file:/Users/ashikov/Documents/test/hackthemeal/backend/target/scala-2.11/classes/application.conf: 29: parsers.text.maxLength is deprecated, use play.http.parser.maxMemoryBuffer instead
-
->2016-11-12 23:41:58,416 - from fi.shika.hackthemeal.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-3 
-Checking table named hackthemeal_dish
-
->2016-11-12 23:41:58,421 - from fi.shika.hackthemeal.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-3 
-Checking table named hackthemeal_diner
-
->2016-11-12 23:41:58,425 - from fi.shika.hackthemeal.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-3 
-Checking table named hackthemeal_portion
-
->2016-11-12 23:41:58,543 - from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-3 
-Slf4jLogger started
-
->2016-11-12 23:41:58,562 - from play.api.libs.concurrent.ActorSystemProvider in application-akka.actor.default-dispatcher-4 
-Starting application default Akka system: application
-
->2016-11-12 23:41:58,567 - from play.api.Play in application-akka.actor.default-dispatcher-4 
-Application started (Dev)
-
->2016-11-12 23:42:16,071 - from play.api.libs.concurrent.ActorSystemProvider in application-akka.actor.default-dispatcher-4 
-Shutdown application default Akka system: application
-
->2016-11-12 23:42:16,085 - from com.zaxxer.hikari.pool.HikariPool in application-akka.actor.default-dispatcher-6 
-db - is closing down.
-
->2016-11-12 23:42:16,099 - from play.api.db.slick.DefaultSlickApi in application-akka.actor.default-dispatcher-6 
-Database default was successfully closed.
-
->2016-11-12 23:42:16,223 - from play.api.db.slick.DefaultSlickApi in application-akka.actor.default-dispatcher-4 
-Created Slick database config for key default.
-
->2016-11-12 23:42:16,223 - from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-4 
-db - is starting.
-
->2016-11-12 23:42:16,228 - from application in application-akka.actor.default-dispatcher-4 
-application.conf @ file:/Users/ashikov/Documents/test/hackthemeal/backend/target/scala-2.11/classes/application.conf: 29: parsers.text.maxLength is deprecated, use play.http.parser.maxMemoryBuffer instead
-
->2016-11-12 23:42:16,272 - from fi.shika.hackthemeal.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-0 
-Checking table named hackthemeal_dish
-
->2016-11-12 23:42:16,278 - from fi.shika.hackthemeal.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-0 
-Checking table named hackthemeal_diner
-
->2016-11-12 23:42:16,283 - from fi.shika.hackthemeal.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-0 
-Checking table named hackthemeal_portion
-
->2016-11-12 23:42:16,394 - from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-2 
-Slf4jLogger started
-
->2016-11-12 23:42:16,398 - from play.api.libs.concurrent.ActorSystemProvider in application-akka.actor.default-dispatcher-4 
-Starting application default Akka system: application
-
->2016-11-12 23:42:16,399 - from play.api.Play in application-akka.actor.default-dispatcher-4 
-Application started (Dev)
-
->2016-11-12 23:42:32,968 - from play.api.libs.concurrent.ActorSystemProvider in application-akka.actor.default-dispatcher-6 
-Shutdown application default Akka system: application
-
->2016-11-12 23:42:32,978 - from com.zaxxer.hikari.pool.HikariPool in application-akka.actor.default-dispatcher-4 
-db - is closing down.
-
->2016-11-12 23:42:32,988 - from play.api.db.slick.DefaultSlickApi in application-akka.actor.default-dispatcher-4 
-Database default was successfully closed.
-
->2016-11-12 23:42:33,137 - from play.api.db.slick.DefaultSlickApi in application-akka.actor.default-dispatcher-6 
-Created Slick database config for key default.
-
->2016-11-12 23:42:33,137 - from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-6 
-db - is starting.
-
->2016-11-12 23:42:33,177 - from application in application-akka.actor.default-dispatcher-6 
-application.conf @ file:/Users/ashikov/Documents/test/hackthemeal/backend/target/scala-2.11/classes/application.conf: 29: parsers.text.maxLength is deprecated, use play.http.parser.maxMemoryBuffer instead
-
->2016-11-12 23:42:33,262 - from fi.shika.hackthemeal.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-1 
-Checking table named hackthemeal_dish
-
->2016-11-12 23:42:33,265 - from fi.shika.hackthemeal.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-1 
-Checking table named hackthemeal_diner
-
->2016-11-12 23:42:33,267 - from fi.shika.hackthemeal.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-1 
-Checking table named hackthemeal_portion
-
->2016-11-12 23:42:33,280 - from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-2 
-Slf4jLogger started
-
->2016-11-12 23:42:33,289 - from play.api.libs.concurrent.ActorSystemProvider in application-akka.actor.default-dispatcher-6 
-Starting application default Akka system: application
-
->2016-11-12 23:42:33,290 - from play.api.Play in application-akka.actor.default-dispatcher-6 
-Application started (Dev)
-
->2016-11-12 23:43:00,199 - from play.api.libs.concurrent.ActorSystemProvider in application-akka.actor.default-dispatcher-5 
-Shutdown application default Akka system: application
-
->2016-11-12 23:43:00,209 - from com.zaxxer.hikari.pool.HikariPool in application-akka.actor.default-dispatcher-6 
-db - is closing down.
-
->2016-11-12 23:43:00,211 - from play.api.db.slick.DefaultSlickApi in application-akka.actor.default-dispatcher-6 
-Database default was successfully closed.
-
->2016-11-12 23:43:00,420 - from play.api.db.slick.DefaultSlickApi in application-akka.actor.default-dispatcher-5 
-Created Slick database config for key default.
-
->2016-11-12 23:43:00,421 - from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-5 
-db - is starting.
-
->2016-11-12 23:43:00,428 - from application in application-akka.actor.default-dispatcher-5 
-application.conf @ file:/Users/ashikov/Documents/test/hackthemeal/backend/target/scala-2.11/classes/application.conf: 29: parsers.text.maxLength is deprecated, use play.http.parser.maxMemoryBuffer instead
-
->2016-11-12 23:43:00,503 - from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-3 
-Slf4jLogger started
-
->2016-11-12 23:43:00,509 - from play.api.libs.concurrent.ActorSystemProvider in application-akka.actor.default-dispatcher-5 
-Starting application default Akka system: application
-
->2016-11-12 23:43:00,510 - from play.api.Play in application-akka.actor.default-dispatcher-5 
-Application started (Dev)
-
->2016-11-12 23:43:00,586 - from fi.shika.hackthemeal.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-2 
-Checking table named hackthemeal_dish
-
->2016-11-12 23:43:00,589 - from fi.shika.hackthemeal.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-2 
-Checking table named hackthemeal_diner
-
->2016-11-12 23:43:00,589 - from fi.shika.hackthemeal.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-2 
-Checking table named hackthemeal_portion
-
->2016-11-12 23:43:07,955 - from play.api.libs.concurrent.ActorSystemProvider in application-akka.actor.default-dispatcher-3 
-Shutdown application default Akka system: application
-
->2016-11-12 23:43:07,960 - from com.zaxxer.hikari.pool.HikariPool in application-akka.actor.default-dispatcher-4 
-db - is closing down.
-
->2016-11-12 23:43:07,964 - from play.api.db.slick.DefaultSlickApi in application-akka.actor.default-dispatcher-4 
-Database default was successfully closed.
-
->2016-11-12 23:43:08,065 - from play.api.db.slick.DefaultSlickApi in application-akka.actor.default-dispatcher-3 
-Created Slick database config for key default.
-
->2016-11-12 23:43:08,066 - from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-3 
-db - is starting.
-
->2016-11-12 23:43:08,070 - from application in application-akka.actor.default-dispatcher-3 
-application.conf @ file:/Users/ashikov/Documents/test/hackthemeal/backend/target/scala-2.11/classes/application.conf: 29: parsers.text.maxLength is deprecated, use play.http.parser.maxMemoryBuffer instead
-
->2016-11-12 23:43:08,124 - from fi.shika.hackthemeal.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-2 
-Checking table named hackthemeal_dish
-
->2016-11-12 23:43:08,128 - from fi.shika.hackthemeal.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-2 
-Checking table named hackthemeal_diner
-
->2016-11-12 23:43:08,129 - from fi.shika.hackthemeal.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-2 
-Checking table named hackthemeal_portion
-
->2016-11-12 23:43:08,194 - from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-4 
-Slf4jLogger started
-
->2016-11-12 23:43:08,196 - from play.api.libs.concurrent.ActorSystemProvider in application-akka.actor.default-dispatcher-3 
-Starting application default Akka system: application
-
->2016-11-12 23:43:08,197 - from play.api.Play in application-akka.actor.default-dispatcher-3 
-Application started (Dev)
-
->2016-11-13 00:03:47,726 - from com.zaxxer.hikari.pool.HikariPool in Hikari housekeeper (pool db) 
-db - Unusual system clock change detected, soft-evicting connections from pool.
 
