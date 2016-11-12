@@ -78,7 +78,7 @@
     cursor: pointer;
     position: relative;
     border-radius: 5px;
-    margin: 0 0 0 80px;
+    //margin: 0 0 0 80px;
     padding: 5px 20px;
     color: $default-text;
     width: 280px;
@@ -87,7 +87,7 @@
     &.text-message {
       font-size: 12px;
       width: inherit;
-      max-width: calc(100% - 80px);
+      //max-width: calc(100% - 80px);
       height: inherit;
       min-height: 60px;
       &:before {
@@ -116,7 +116,7 @@
   }
 
   .message-header {
-    font-size: 12px;
+    font-size: 24px;
     padding-bottom: 5px;
     .author {
       font-size: 13px;
@@ -125,7 +125,7 @@
   }
 
   .message-content {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 20px;
   }
 

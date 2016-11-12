@@ -16,6 +16,10 @@
             return $http.get('/portions/').then(handleSuccess,handleError);
         }
 
+        function getYesterday(){
+            return $http.post('/dishes/dates',{"end":"2016-12-12T00:00:00.000Z","start":"2016-12-13T00:00:00.000Z"}).then(handleSuccess,handleError);
+        }
+
         function handleSuccess(res) {
             return res.data;
         }
