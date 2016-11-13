@@ -26,3 +26,30 @@ Checking table named hackthemeal_diner
 >2016-11-13 03:39:52,952 - from fi.shika.hackthemeal.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-1 
 Checking table named hackthemeal_portion
 
+>2016-11-13 03:49:56,403 - from play.api.db.slick.DefaultSlickApi in application-akka.actor.default-dispatcher-3 
+Created Slick database config for key default.
+
+>2016-11-13 03:49:56,405 - from com.zaxxer.hikari.HikariDataSource in application-akka.actor.default-dispatcher-3 
+db - is starting.
+
+>2016-11-13 03:49:56,411 - from application in application-akka.actor.default-dispatcher-3 
+application.conf @ file:/Users/ashikov/Documents/test/hackthemeal/backend/target/scala-2.11/classes/application.conf: 31: parsers.text.maxLength is deprecated, use play.http.parser.maxMemoryBuffer instead
+
+>2016-11-13 03:49:56,592 - from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-2 
+Slf4jLogger started
+
+>2016-11-13 03:49:56,598 - from play.api.libs.concurrent.ActorSystemProvider in application-akka.actor.default-dispatcher-3 
+Starting application default Akka system: application
+
+>2016-11-13 03:49:56,599 - from play.api.Play in application-akka.actor.default-dispatcher-3 
+Application started (Dev)
+
+>2016-11-13 03:49:56,732 - from fi.shika.hackthemeal.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-2 
+Checking table named hackthemeal_dish
+
+>2016-11-13 03:49:56,756 - from fi.shika.hackthemeal.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-2 
+Checking table named hackthemeal_diner
+
+>2016-11-13 03:49:56,772 - from fi.shika.hackthemeal.checker.DatabaseCheckerImpl in ForkJoinPool-1-worker-2 
+Checking table named hackthemeal_portion
+
