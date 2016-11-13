@@ -78,7 +78,8 @@
   <!-- endinject -->
   <!-- endbuild -->
   <script>
-        var repeat = window.setInterval(function(){
+    var atTop = false;
+  window.setInterval(function(){
       $(document).ready(function(){
         if(!atTop)
           $('body,html').animate({scrollTop: $(window).height()}, 4600);
@@ -86,26 +87,9 @@
           $('body,html').animate({scrollTop:0}, 4600);
 
         atTop = !atTop;
-    });
-    },12000)
-
-    var didScroll = false;
-
-    window.onscroll = doThisStuffOnScroll;
-
-    function doThisStuffOnScroll() {
-        didScroll = true;
-    }
-
-    setInterval(function() {
-        if(didScroll) { 
-          clearInterval(repeat);
-            didScroll = false;
-            console.log('You scrolled');
-       }
-    }, 100);
-
-    var atTop = false;
+  });
+  },12000)
+  
 </script>
 </body>
 
