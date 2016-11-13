@@ -9,13 +9,19 @@
         service.getDayInfo = getDayInfo;
         service.getYesterday = getYesterday;
         service.getMonth = getMonth;
+        service.getWeekPop = getWeekPop;
+        service.getMostPop = getMostPop;
 
         function getDayInfo(){
            return $http.get('/portions/').then(handleSuccess,handleError);
         }
 
-        function getSomethingElse(){
-            return $http.get('/portions/').then(handleSuccess,handleError);
+        function getMostPop(){
+            return $http.get('/dishes/common/?limit=5').then(handleSuccess,handleError);
+        }
+
+        function getWeekPop(){
+            return $http.get('/dishes/week/').then(handleSuccess,handleError);
         }
 
         function getYesterday(){

@@ -9,8 +9,10 @@
       .controller('BlurFeedCtrlz', BlurFeedCtrlz);
 
   /** @ngInject */
-  function BlurFeedCtrlz($scope) {
-    $scope.feed = [
+  function BlurFeedCtrlz($scope, dataService) {
+    dataService.getMostPop().then(function(res){
+      $scope.feed = res;
+      /* $scope.feed = [
       {
         type: 'text-message',
         author: 'Mashed potato',
@@ -45,9 +47,12 @@
         expanded: false,
       },
     ];
-
+    */
     $scope.expandMessage = function(message){
       message.expanded = !message.expanded;
     }
+    }).catch(function(err){
+      console.log(err);
+    });
   }
 })();
