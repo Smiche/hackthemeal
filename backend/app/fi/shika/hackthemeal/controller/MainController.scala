@@ -7,22 +7,27 @@ import com.google.inject.Inject
 import fi.shika.hackthemeal.formats.JsonFormats
 import fi.shika.hackthemeal.persistence.Storage
 import fi.shika.hackthemeal.persistence.model.{Diner, Dish, Portion}
+import fi.shika.hackthemeal.processor.StatisticsProcessor
 import fi.shika.hackthemeal.request.DateIntervalRequest
+import org.joda.time.DateTime
 import org.json4s._
 import org.json4s.ext.JodaTimeSerializers
-import play.api.Logger
 import play.api.mvc.{Action, Controller}
 
+import scala.collection.mutable
 import scala.concurrent.ExecutionContext
 
-class MainController @Inject()(val storage: Storage, json4s: Json4s)(implicit val ec: ExecutionContext)
-  extends Controller {
+class MainController @Inject()(
+  val storage: Storage,
+  json4s: Json4s,
+  val processor: StatisticsProcessor
+)(
+  implicit val ec: ExecutionContext
+) extends Controller {
 
   import json4s._
 
   implicit val defaultFormats = JsonFormats ++ JodaTimeSerializers.all
-
-  private val _log = Logger(getClass)
 
   def createDishes = Action.async(json) { implicit request =>
     storage.createDishes(request.body.extract[Seq[Dish]])
@@ -96,6 +101,53 @@ class MainController @Inject()(val storage: Storage, json4s: Json4s)(implicit va
           )
       }
       Ok(Extraction.decompose(repacked))
+    }
+  }
+
+  def getStatistics(timestamp: Long) = Action.async { implicit request =>
+    val end = new DateTime(timestamp)
+    val start = end.minusMonths(1)
+
+    storage.getStatisticsData(start, end).map { case (portions, diners, dishes) =>
+
+      val mostLikedLastMonth = processor.provideMostLiked(portions)
+      val mostLikedForDay = processor.provideMostLikedInDay(portions, end)
+      val dietScores = processor.provideDietScores(diners)
+      val dietDishes = processor.provideDietPortions(dishes)
+      val bestDiners = processor.provideDinersForWeekDay(portions, diners, end)
+      val preferredDishes = processor.providePreferredDishes(portions, bestDiners)
+
+      val FirstStepValue  = 1.0
+      val SecondStepValue = 1.7
+      val ThirdStepValue  = 1.4
+      val ForthStepValue  = 1.9
+
+      val scores = mutable.Map[Long, Double]()
+      dishes.map(it => (it.id.get, 0.0)).foreach(scores += _)
+
+      def addScore(seq: Seq[Long], coeff: Double) {
+        seq.zipWithIndex
+          .map { case (id, count) => (id, scores(id) + (seq.size - count) * coeff) }
+          .foreach { scores += _ }
+      }
+      addScore(mostLikedLastMonth, FirstStepValue)
+      addScore(mostLikedForDay, SecondStepValue)
+      addScore(preferredDishes, ForthStepValue)
+
+      dietDishes.L.map { id => (id, scores(id) + dietScores("L") * ThirdStepValue) }.foreach { scores += _ }
+      dietDishes.G.map { id => (id, scores(id) + dietScores("G") * ThirdStepValue) }.foreach { scores += _ }
+      dietDishes.M.map { id => (id, scores(id) + dietScores("M") * ThirdStepValue) }.foreach { scores += _ }
+      dietDishes.V.map { id => (id, scores(id) + dietScores("V") * ThirdStepValue) }.foreach { scores += _ }
+      dietDishes.VL.map { id => (id, scores(id) + dietScores("VL") * ThirdStepValue) }.foreach { scores += _ }
+
+      val result = scores.toSeq.sortBy(-_._2)
+        .map { case (id, score) => Map(
+            "dish" -> dishes.filter(_.id.get == id).head,
+            "score" -> score
+          )
+        }
+
+      Ok(Extraction.decompose(result))
     }
   }
 }

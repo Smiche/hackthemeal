@@ -25,6 +25,8 @@ trait Storage {
   def getMostTakenDishes(limit: Int): Future[Seq[(Dish, Int)]]
 
   def getMostTakenDishesPerWeekDay: Future[Seq[(Int, Dish, Int)]]
+
+  def getStatisticsData(start: DateTime, end: DateTime): Future[(Seq[Portion], Seq[Diner], Seq[Dish])]
 }
 
 class StorageImpl @Inject()(val configProvider: DatabaseConfigProvider)(implicit val ec: ExecutionContext)
@@ -87,6 +89,12 @@ class StorageImpl @Inject()(val configProvider: DatabaseConfigProvider)(implicit
     }
     .toSeq
     .map(it => (it._1, dishes.filter(_.id == it._2._1).head, it._2._2.size))
+
+  def getStatisticsData(start: DateTime, end: DateTime) = for {
+    portionList <- db.run(portions.filter(it => it.moment >= start && it.moment <= end).result)
+    dinerList   <- db.run(diners.filter(_.id.inSet(portionList.map(_.dinerid.get).distinct)).result)
+    dishesList  <- db.run(dishes.filter(_.id.inSet(portionList.map(_.dishid.get).distinct)).result)
+  } yield (portionList, dinerList, dishesList)
 
   private def getNeededFuckingSetPlease(results: Seq[(DateTime, Option[Long])]) =
     results.groupBy(_._1.dayOfWeek().get)

@@ -10,6 +10,7 @@ POST     /portions/dates/             @fi.shika.hackthemeal.controller.MainContr
 POST     /dishes/dates/               @fi.shika.hackthemeal.controller.MainController.getDishHistory
 GET      /dishes/common/              @fi.shika.hackthemeal.controller.MainController.getMostTakenDishes(limit: Int ?= 5)
 GET      /dishes/week/                @fi.shika.hackthemeal.controller.MainController.getMostTakenDishPerDay
+GET      /dishes/statistics/          @fi.shika.hackthemeal.controller.MainController.getStatistics(timestamp: Long)
 
 GET     /                             @controllers.Assets.at(path="/public", file="index.html")
 GET     /*file                        @controllers.Assets.at(path="/public", file)
