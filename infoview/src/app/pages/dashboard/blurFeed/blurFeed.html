@@ -3,7 +3,7 @@
   <div class="feed-message" ng-repeat="message in feed" ng-click="expandMessage(message)">
     <div class="text-block text-message">
       <div class="message-header">
-        <span class="author">{{ ::message.dish.dispname }} {{ ::message.count}}</span>
+        <span class="author">{{ ::message.dish.dispname }}</span>
       </div>
       <div class="message-content">
         <span ng-if="message.preview">{{message.header}} </span>{{::message.text}}
@@ -13,12 +13,12 @@
           <img ng-src="{{ ::( message.preview | appImage )}}">
         </a>
       </div>
-      <div ng-show="false" class="message-time">
-        <div class="post-time">
+      <div ng-show="true" class="message-time">
+        <div ng-show="false" class="post-time">
           {{::message.time}}
         </div>
         <div class="ago-time">
-          {{::message.ago}}
+          {{ ::message.count}}
         </div>
       </div>
     </div>
