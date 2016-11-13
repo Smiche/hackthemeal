@@ -56,4 +56,32 @@ class MainController @Inject()(val storage: Storage, json4s: Json4s)(implicit va
       Ok(Extraction.decompose(result))
     }
   }
+
+  def getDishHistory = Action.async(json) { implicit request =>
+    val data = request.body.extract[DateIntervalRequest]
+    storage.getDishHistory(data.start, data.end).map { dishes =>
+      val result = dishes.map {
+        case (dish, date, count) =>
+          Map(
+            "dish" -> dish,
+            "date" -> date,
+            "count" -> count
+          )
+      }
+      Ok(Extraction.decompose(result))
+    }
+  }
+
+  def getMostTakenDishes(limit: Int) = Action.async { implicit request =>
+    storage.getMostTakenDishes(limit).map { dishes =>
+      val result = dishes.sortBy(-_._2).map {
+        case (dish, count) =>
+          Map(
+            "dish" -> dish,
+            "count" -> count
+          )
+      }
+      Ok(Extraction.decompose(result))
+    }
+  }
 }
