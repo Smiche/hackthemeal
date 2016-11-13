@@ -1,12 +1,12 @@
 
 <div class="feed-messages-container" track-width="smallContainerWidth" min-width="360">
-  <div class="feed-message" ng-repeat="pairs in pairs">
+  <div class="feed-message" ng-repeat="pair in pairs">
     <div class="text-block text-message">
       <div class="message-header">
         <span class="author">{{ ::pair.dish.dispname }}</span>
       </div>
       <div class="message-content">
-        <span ng-if="message.preview">{{message.header}} </span>{{::pair.dish.status}}
+        <span ng-if="true">{{message.header}} </span>{{::pair.dish.status}}
       </div>
       <div class="preview" ng-show="false" ng-if="false">
         <a href="{{::message.link}}" target="_blank">

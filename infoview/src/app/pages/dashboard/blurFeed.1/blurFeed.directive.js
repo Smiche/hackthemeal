@@ -13,7 +13,7 @@
     return {
       restrict: 'E',
       controller: 'BlurFeedCtrl2',
-      templateUrl: 'app/pages/dashboard/blurFeed/blurFeed.html'
+      templateUrl: 'app/pages/dashboard/blurFeed.1/blurFeed.html'
     };
   }
 })();

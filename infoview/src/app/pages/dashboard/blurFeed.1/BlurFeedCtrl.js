@@ -18,17 +18,18 @@
       for(var i = 0;i<all.length;i++){
           var cur = all[i];
           if(cur.dish.status == "vegetarian" && vegArr.length < 5){
-            cur.score.toFixed(2);
+            cur.score = cur.score.toFixed(2);
             vegArr.push(cur);
           } 
 
           if(cur.dish.status == "meat" && meatArr.length < 5){
-            cur.score.toFixed(2);
+            cur.score = cur.score.toFixed(2);
             meatArr.push(cur);
           }
       }
 
       $scope.pairs = [vegArr[0],vegArr[1],meatArr[0],meatArr[1]];
+      console.log($scope.pairs);
 
       //$scope.feed = res;
      /* $scope.feed = [

@@ -11,9 +11,11 @@
         service.getMonth = getMonth;
         service.getWeekPop = getWeekPop;
         service.getMostPop = getMostPop;
+        service.getPredictions = getPredictions;
 
         function getPredictions(){
-            return $http.get('/dishes/statistics/?timestamp="2016-12-13T00:00:00.000Z"').then(handleSuccess, handleError);
+            var date = new Date("2016-12-13T00:00:00.000Z")
+            return $http.get('/dishes/statistics/?timestamp=' + date.getTime()).then(handleSuccess, handleError);
         }
 
         function getDayInfo(){
