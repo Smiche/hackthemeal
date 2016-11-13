@@ -1,6 +1,14 @@
 $panel-title-height: 44px;
 $panel-heading-font-size: 16px;
 
+.first-row-panel{
+  height: 420px;
+}
+
+.chart-row-panel{
+  height: 450px;
+}
+
 .panel {
   @include scrollbars(.4em, rgba(0, 0, 0, 0.6), rgba(255, 255, 255, 0.7));
   color: $default-text;
@@ -20,8 +28,10 @@ $panel-heading-font-size: 16px;
     height: $xsmall-panel-height;
   }
   &.medium-panel {
-    height: $medium-panel-height;
+    height: 515px;
   }
+
+
   &.xmedium-panel {
     height: $extra-medium-panel-height;
   }
