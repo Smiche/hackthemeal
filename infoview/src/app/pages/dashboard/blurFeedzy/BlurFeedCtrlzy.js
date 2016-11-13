@@ -17,6 +17,7 @@
       }
 
       $scope.feed = res;
+      console.log($scope.feed);
       /*
        $scope.feed = [
          {
