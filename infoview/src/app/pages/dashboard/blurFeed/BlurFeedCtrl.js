@@ -12,7 +12,7 @@
   function BlurFeedCtrl($scope, dataService) {
     dataService.getYesterday().then(function (res) {
       $scope.feed = res;
-      $scope.feed = [
+     /* $scope.feed = [
         {
           type: 'text-message',
           author: 'Pizza',
@@ -46,7 +46,7 @@
           ago: '10 Nov',
           expanded: false,
         },
-      ];
+      ]; */
 
       $scope.expandMessage = function (message) {
         message.expanded = !message.expanded;
