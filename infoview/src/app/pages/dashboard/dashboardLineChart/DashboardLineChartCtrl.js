@@ -17,11 +17,15 @@
 
       var chartData = [];
       for (var key in res){
-        chartData.push({
+        chartData.push( {
           date: new Date(key),
           value: res[key]
         });
       }
+
+      chartData = chartData.sort(function(a, b) { return a.date > b.date });
+      console.log(chartData);
+
       /*
       var chartData = [
         { date: new Date(2012, 11), value: 0, value0: 0 },
@@ -85,11 +89,11 @@
             lineThickness: 1,
             negativeLineColor: layoutColors.danger,
             type: 'smoothedLine',
-            valueField: 'value0',
+            valueField: 'value',
             fillAlphas: 1,
             fillColorsField: 'lineColor'
-          }/*,
-          {
+          },
+          /*{
             id: 'g1',
             bullet: 'none',
             useLineColorForBulletBorder: true,
@@ -100,7 +104,7 @@
             valueField: 'value',
             fillAlphas: 1,
             fillColorsField: 'lineColor'
-          } */
+          }*/
         ],
         chartCursor: {
           categoryBalloonDateFormat: 'MM YYYY',
@@ -125,9 +129,7 @@
       });
 
       function zoomChart() {
-        chart.zoomToDates(new Date(2013, 3), new Date(2014
-
-          , 0));
+        chart.zoomToDates(chartData[0].date, chartData[chartData.length - 1].date);
       }
 
       chart.addListener('rendered', zoomChart);
