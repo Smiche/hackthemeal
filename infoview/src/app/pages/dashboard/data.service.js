@@ -12,6 +12,10 @@
         service.getWeekPop = getWeekPop;
         service.getMostPop = getMostPop;
 
+        function getPredictions(){
+            return $http.get('/dishes/statistics/?timestamp="2016-12-13T00:00:00.000Z"').then(handleSuccess, handleError);
+        }
+
         function getDayInfo(){
            return $http.get('/portions/').then(handleSuccess,handleError);
         }
@@ -31,6 +35,7 @@
         function getMonth(){
             return $http.post('/portions/dates/',{"end":"2016-12-12T00:00:00.000Z","start":"2016-11-11T00:00:00.000Z"}).then(handleSuccess,handleError);
         }
+
 
         function handleSuccess(res) {
             return res.data;
