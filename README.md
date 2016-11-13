@@ -19,7 +19,7 @@ _Our solution is focused on improving the efficiency of food restaurants._
 - Back-end Play Framework(in Scala flavour)
 
 ![](https://upload.wikimedia.org/wikipedia/commons/3/3a/Linear_regression.svg?raw=true)
-![](http://www.pixhost.org/show/995/35191808_uqfcgir4wd8.jpg?raw=true)
+![](http://img8.pixhost.org/images/995/35191808_uqfcgir4wd8.jpg?raw=true)
 ### Impact
 - Less food wasted
 - Better customer turnout
