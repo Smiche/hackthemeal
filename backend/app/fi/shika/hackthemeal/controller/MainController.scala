@@ -84,4 +84,18 @@ class MainController @Inject()(val storage: Storage, json4s: Json4s)(implicit va
       Ok(Extraction.decompose(result))
     }
   }
+
+  def getMostTakenDishPerDay = Action.async { implicit request =>
+    storage.getMostTakenDishesPerWeekDay.map { results =>
+      val repacked = results.sortBy(_._1).map {
+        case (weekDay, dish, count) =>
+          Map(
+            "day" -> weekDay,
+            "dish" -> dish,
+            "count" -> count
+          )
+      }
+      Ok(Extraction.decompose(repacked))
+    }
+  }
 }
